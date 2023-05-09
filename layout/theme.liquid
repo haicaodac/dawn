@@ -1,12 +1,12 @@
 {%- liquid
           for item in articles
             if item.id = '604902457644'
-              assign name = item.name
+              assign id = item.id
               break
             endif
           endfor
         -%}
-        Name: {{ name }}, {{ articles['page-2'] }}
+        Name: {{ id }}, {{ articles['page-2'].id }}
 
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
