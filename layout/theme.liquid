@@ -1,4 +1,5 @@
-{% for blog in blogs %}
+{% for link in linklists.blogs.links %}
+  {% assign blog = link.object %}
   {% for article in blog.articles %}
     {{ article.title }}
   {% endfor %} 
