@@ -1,10 +1,12 @@
 {%- liquid
-          for item in articles
-            if item.id = '604902457644'
-              assign id = item.id
-              break
-            endif
-          endfor
+     for blog in blogs
+      for item in blog.articles
+        if item.id = '604902457644'
+          assign id = item.id
+          break
+        endif
+      endfor
+     endfor
         -%}
         Name: {{ id }}, {{ articles['news/page-2'].id }}
 
