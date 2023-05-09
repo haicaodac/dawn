@@ -1,3 +1,9 @@
+{% for blog in blogs %}
+  {% for article in blog.articles %}
+    {{ article.title }}
+  {% endfor %} 
+{% endfor %}
+
 {%- liquid
      for blog in blogs
         paginate blog.articles by 100000
