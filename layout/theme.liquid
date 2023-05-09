@@ -1,23 +1,14 @@
-{% for link in linklists.blogs.links %}
-  {% assign blog = link.object %}
-  {% for article in blog.articles %}
-    {{ article.title }}
-  {% endfor %} 
-{% endfor %}
+
 
 {%- liquid
-     for blog in blogs
-        paginate blog.articles by 100000
-          for item in blog.articles
-            if item.id = '604902457644'
-              assign id = item.id
+          for item in collections
+            if item.id == '440211177772'
+              assign collection = item
               break
             endif
           endfor
-        endpaginate
-     endfor
-        -%}
-        Name: {{ id }}, {{ articles['news/page-2'].id }}
+        -%}\n
+        Name: {{ collection.id }}
 
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
