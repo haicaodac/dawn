@@ -1,3 +1,15 @@
+
+
+{%- liquid
+          for item in collections
+            if item.id == 440211177772
+              assign collection = item
+              break
+            endif
+          endfor
+        -%}\n
+        Name: {{ collection | json }}
+
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
@@ -263,6 +275,9 @@
       }
     </script>
   {% render 'gp-head' %}
+<!--Gem_Page_Header_Script-->
+{% render 'gem-app-header-scripts' %}
+<!--End_Gem_Page_Header_Script-->
 </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}"><main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
@@ -309,5 +324,8 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  </body>
+  <!--Gem_Page_Footer_Script-->
+{% render 'gem-app-footer-scripts', GEM_FOOTER_SCRIPT: GEM_FOOTER_SCRIPT %}
+<!--End_Gem_Page_Footer_Script-->
+</body>
 </html>
