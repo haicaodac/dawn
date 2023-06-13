@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "gp_section_464933690208682517": {
+      "type": "gp-section-464933690208682517",
+      "settings": {
+      }
+    },
+    "gp_section_464933690443563541": {
+      "type": "gp-section-464933690443563541",
+      "settings": {
+      }
+    },
+    "gp_section_464933690410009109": {
+      "type": "gp-section-464933690410009109",
+      "settings": {
+      }
+    },
+    "gp_section_464933690644955669": {
+      "type": "gp-section-464933690644955669",
+      "settings": {
+      }
+    },
+    "gp_section_464933691248869909": {
+      "type": "gp-section-464933691248869909",
+      "settings": {
+      }
+    },
+    "gp_section_464933690527449621": {
+      "type": "gp-section-464933690527449621",
+      "settings": {
+      }
+    },
+    "gp_section_464933691483750933": {
+      "type": "gp-section-464933691483750933",
+      "settings": {
+      }
+    },
+    "gp_section_464933692490383893": {
+      "type": "gp-section-464933692490383893",
+      "settings": {
+      }
+    },
+    "gp_section_464933691215315477": {
+      "type": "gp-section-464933691215315477",
+      "settings": {
+      }
+    },
+    "gp_section_464933690644890133": {
+      "type": "gp-section-464933690644890133",
+      "settings": {
+      }
+    },
+    "gp_section_464933691265647125": {
+      "type": "gp-section-464933691265647125",
+      "settings": {
+      }
+    },
+    "gp_section_464933691232092693": {
+      "type": "gp-section-464933691232092693",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "gp_section_464933690208682517",
+    "gp_section_464933690443563541",
+    "gp_section_464933690410009109",
+    "gp_section_464933690644955669",
+    "gp_section_464933691248869909",
+    "gp_section_464933690527449621",
+    "gp_section_464933691483750933",
+    "gp_section_464933692490383893",
+    "gp_section_464933691215315477",
+    "gp_section_464933690644890133",
+    "gp_section_464933691265647125",
+    "gp_section_464933691232092693"
+  ]
+}
