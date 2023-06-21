@@ -8,9 +8,22 @@
       if gpTemplateSuffix contains "gp-template-" and isGpSplitSuccess
         assign isV7GpTemplate = true
       endif
+      assign gpShopMeta = shop.metafields.GEMPAGES
+      if gpShopMeta and gpShopMeta['product-default'] and request.page_type == 'product'
+        assign isV7GpTemplate = true
+      endif
+      if gpShopMeta and gpShopMeta['index-default'] and request.page_type == 'index'
+        assign isV7GpTemplate = true
+      endif
+       if gpShopMeta and gpShopMeta['collection-default'] and request.page_type == 'collection'
+        assign isV7GpTemplate = true
+      endif
+      if isPreview
+       assign isV7GpTemplate = true
+      endif
     %}
 
-    {% if isV7GpTemplate %}
+    {% if isV7GpTemplate or isThemeSection %}
       
         <script src="https://d3kbi0je7pp4lw.cloudfront.net/assets/gp-lazyload.v2.js" async></script>
         <script src="https://d3kbi0je7pp4lw.cloudfront.net/assets/gp-global.js" defer></script>
