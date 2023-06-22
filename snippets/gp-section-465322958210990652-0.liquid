@@ -4,8 +4,8 @@
       <div class="hidden aspect-square w-[12px] rounded-full shadow-md"></div>
       <div
         
-        class="relative gp-carousel-wrapper gtyeXXuqGG"
-        style="--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--h:auto;--w:100%;--w-tablet:100%;--w-mobile:100%"
+        class="relative gp-carousel-wrapper mobile:!block tablet:!block !block gtyeXXuqGG"
+        style="--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--h:auto;--w:100%;--w-tablet:100%;--w-mobile:100%;visibility:hidden"
       >
         <div
           class="h-full"
@@ -84,6 +84,7 @@
         style="--tt:default;--mb:var(--g-s-s);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
       >
       <div
+        data-gp-text
         class="gp-text"
         style="--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#242424;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -242,6 +243,7 @@
         style="--tt:default;--mb:var(--g-s-2xl);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
       >
       <div
+        data-gp-text
         class="g-paragraph-1 gp-text"
         style="--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#424242"
       >
@@ -325,25 +327,25 @@
   {%- endif -%}
   <gp-product-images gp-data='{"id":"g7e8oud_21", "setting":{"featureImageVisible":{"desktop":true,"mobile":true,"tablet":true},"hoverEffect":"none","zoomType":"default","zoom":1.5,"otherImage":0,"clickEffect":"none","galleryVisible":{"desktop":false,"mobile":false,"tablet":false},"type":{"desktop":"images","mobile":"images","tablet":"images"},"largeViewInPopup":{"desktop":false,"mobile":false,"tablet":false},"slidesToShow":{"desktop":5,"tablet":5,"mobile":3},"numberPerRow":{"desktop":5,"tablet":5,"mobile":3},"showActiveStatus":true,"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"loop":{"desktop":true,"mobile":true,"tablet":true},"pauseOnHover":true,"speed":1,"arrowIcon":"","dragToScroll":true}, "styles":{"ftAspectRatio":{"desktop":"1","mobile":"1","tablet":"1"},"ftAspectWidth":{"desktop":0,"mobile":0,"tablet":0},"ftAspectHeight":{"desktop":0,"mobile":0,"tablet":0},"ftLayout":{"desktop":"cover","mobile":"cover","tablet":"cover"},"ftFullWidth":{"desktop":false,"mobile":false,"tablet":false},"ftWidth":{"desktop":"80px","mobile":"80px","tablet":"80px"},"ftAlign":{"desktop":"center","mobile":"center","tablet":"center"},"aspectRatio":{"desktop":"1","mobile":"1","tablet":"1"},"aspectWidth":{"desktop":0,"mobile":0,"tablet":0},"aspectHeight":{"desktop":0,"mobile":0,"tablet":0},"layout":{"desktop":"cover","mobile":"cover","tablet":"cover"},"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"300px","mobile":"300px","tablet":"300px"},"align":{"desktop":"flex-start","mobile":"flex-start","tablet":"flex-start"},"position":{"desktop":"bottom-left"},"gallerySpacing":{"desktop":"var(--g-s-s)","mobile":"var(--g-s-s)"},"spacing":{"desktop":"var(--g-s-s)","mobile":"var(--g-s-s)"},"verticalLayout":{"desktop":false,"mobile":false,"tablet":false},"verticalLayoutRow":{"desktop":true,"mobile":true,"tablet":true},"dotColor":{"desktop":"bg-1"},"dotActiveColor":{"desktop":"highlight"}}, "product":{{product | json | escape}}}'>
     <div
-        class="flex w-full  mobile:overflow-visible flex-col tablet:flex-col mobile:flex-col"
+        class="flex w-full flex-col tablet:flex-col mobile:flex-col"
         style="--jc:start;--jc-tablet:start;--jc-mobile:start"
       >
         <div
-    class="featured-image-root"
-    style="--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--d:flex;--d-mobile:flex;--d-tablet:flex;--w:80px;--w-tablet:80px;--w-mobile:80px;--maxw:80px;--maxw-tablet:80px;--maxw-mobile:80px"
+  class="featured-image-root gp-product-images-ft flex"
+  style="--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--d:flex;--d-mobile:flex;--d-tablet:flex;--w:80px;--w-tablet:80px;--w-mobile:80px;--maxw:80px;--maxw-tablet:80px;--maxw-mobile:80px"
+>
+  <div role="presentation" 
+    class="featured-image-wrapper relative flex w-full overflow-hidden"
+    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1"
   >
-    <div role="presentation" 
-      class="featured-image-wrapper relative flex w-full overflow-hidden"
-      style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1"
-    >
-    <div class="flex w-full justify-center">
-    <div class="featured-image group relative w-full">
-      <img
+  <div class="flex w-full items-start justify-center">
+  <div class="featured-image group relative w-full overflow-hidden">
+    <img
     id="{%- if featured_image != null -%}
             {{featured_image.id}}
             {%- endif -%}"
     draggable="false"
-    class="w-full featured-image-only transition-opacity gp_lazyload"
+    class="w-full featured-image-only w-full transition-opacity gp_lazyload"
     data-src="{%- if featured_image != null -%}
               {{featured_image.src | img_url: '1024x1024'}}
             {%- else -%}
@@ -370,80 +372,40 @@
     sizes="100vw"
     style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%"
   />
-      
-      
-    </div>
-    </div>
-    </div>
+    
+    
+  </div>
+  </div>
+  </div>
 </div>
-        <div
-          class="gallery-wrapper h-fit max-w-full overflow-auto justify-start tablet:justify-start mobile:justify-start"
-          style="--fs:1.23;--d:none;--d-mobile:none;--d-tablet:none;--w:100%;--w-tablet:100%;--w-mobile:100%;--maxw:100%;--maxw-tablet:100%;--maxw-mobile:100%"
-        >
         {%- if product.images.size > 1 -%}
-          
+          <div
+            class="gallery-wrapper gp-product-images-gallery inline-flex h-fit max-w-full justify-start tablet:justify-start mobile:justify-start"
+            style="--fs:1.23;--d:none;--d-mobile:none;--d-tablet:none;--w:300px;--w-tablet:300px;--w-mobile:300px;--maxw:300px;--maxw-tablet:300px;--maxw-mobile:300px;--mt:var(--g-s-s);--mt-mobile:var(--g-s-s);--mt-tablet:var(--g-s-s)"
+          >
+            
   <script src="https://d3kbi0je7pp4lw.cloudfront.net/assets/gp-carousel.js" defer="defer"></script>
-    <gp-carousel type="grid-carousel" id="gp-root-carousel-g7e8oud_21-{{product.id}}" class="flex-1 w-full carousel-galley"  gp-data='{"id":"g7e8oud_21-{{product.id}}","setting":{"loop":{"desktop":true,"mobile":true,"tablet":true},"slidesToShow":{"desktop":5,"tablet":5,"mobile":3},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"enableDrag":true,"vertical":{"desktop":false,"mobile":false,"tablet":false},"dotActiveColor":{"desktop":"highlight"},"dotColor":{"desktop":"bg-1"},"arrowCustom":""},"styles":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"100%","tablet":"100%","mobile":"100%"},"spacing":{"desktop":5,"tablet":5,"mobile":5},"adaptiveHeight":{"desktop":true,"mobile":true,"tablet":true}}}' style="--d:none;--d-mobile:none;--d-tablet:none">
+    <gp-carousel type="grid-carousel" id="gp-root-carousel-g7e8oud_21-{{product.id}}" class="flex-1 w-full carousel-galley"  gp-data='{"id":"g7e8oud_21-{{product.id}}","setting":{"loop":{"desktop":true,"mobile":true,"tablet":true},"slidesToShow":{"desktop":5,"mobile":3,"tablet":5},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"enableDrag":true,"vertical":{"desktop":false,"mobile":false,"tablet":false},"dotActiveColor":{"desktop":"highlight"},"dotColor":{"desktop":"bg-1"},"arrowCustom":""},"styles":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"100%","tablet":"100%","mobile":"100%"},"spacing":{"desktop":5,"tablet":5,"mobile":5},"adaptiveHeight":{"desktop":true,"mobile":true,"tablet":true}},"isHiddenArrowWhenDisabled":true}' style="--d:none;--d-mobile:none;--d-tablet:none">
       <div class="hidden aspect-square w-[12px] rounded-full shadow-md"></div>
       <div
         
-        class="relative gp-carousel-wrapper"
-        style="--mt:var(--g-s-s);--mt-mobile:var(--g-s-s);--h:auto;--h-tablet:auto;--h-mobile:auto;--w:100%;--w-tablet:100%;--w-mobile:100%"
+        class="relative gp-carousel-wrapper mobile:!block tablet:!block !block"
+        style="--h:auto;--h-tablet:auto;--h-mobile:auto;--w:100%;--w-tablet:100%;--w-mobile:100%;visibility:hidden"
       >
         <div
           class="h-full"
         >
           <div id="gp-carousel-g7e8oud_21-{{product.id}}" class="gem-slider h-full overflow-hidden">
             
-      {%- if product.images.size > 1 -%}
-      {%- for image in product.images -%}
-          {%- if featured_image != null and image.id == featured_image.id -%}
-            
+    {%- if product.images.size > 1 -%}
+    {%- for image in product.images -%}
+        {%- if featured_image != null and image.id == featured_image.id -%}
+          
     <div
-      
+      data-outline="active"
       id="{{image.id}}"
-      style=""
-      class="gem-slider-item w-full gem-slider-item-g7e8oud_21-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item outline p-[1px]"
-    >
-      
-      <img
-    
-    draggable="false"
-    class="gp_lazyload"
-    data-src="{{image.src | product_img_url: '1024x1024'}}" data-srcset="{{image.src | product_img_url: '1024x1024'}} 768w,{{image.src | product_img_url: '1024x1024'}} 1024w,{{image.src | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{image.width}}" height="{{image.height}}" alt="{{image.alt}}" priority
-    sizes="100vw"
-    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%;--w-tablet:100%;--w-mobile:100%"
-  />
-
-      <div class="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/50 opacity-0 transition-opacity duration-100 group-hover:opacity-100" 
-      style="--d: none;--d-mobile: none;--d-tablet: none;outline-color: var(--g-c-brand, brand);" 
-      >
-        <svg
-          height="100%"
-          width="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          viewBox="0 0 512 512"
-          color="#fff"
-        >
-          <path
-            fill="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M62.2467 345.253C43.7072 326.714 29.1474 305.116 18.9714 281.057C8.42839 256.13 3.08301 229.671 3.08301 202.418C3.08301 175.165 8.43012 148.707 18.974 123.78C29.15 99.7213 43.7098 78.123 62.2485 59.5834C80.788 41.0439 102.386 26.4841 126.445 16.3081C151.372 5.76422 177.831 0.417969 205.084 0.417969C232.337 0.417969 258.794 5.76421 283.722 16.3064C307.78 26.4823 329.379 41.0422 347.918 59.5817C366.458 78.1212 381.017 99.7196 391.194 123.778C401.737 148.706 407.083 175.163 407.083 202.417C407.083 229.671 401.737 256.129 391.194 281.056C388.406 287.648 385.277 294.048 381.839 300.257L493.397 411.815C514.091 432.511 514.091 466.187 493.395 486.883L484.272 496.006C474.245 506.032 460.915 511.553 446.738 511.553C432.559 511.553 419.228 506.032 409.202 496.006L296.022 382.824C291.996 384.854 287.898 386.762 283.721 388.528C258.794 399.073 232.336 404.419 205.082 404.419C177.828 404.419 151.371 399.071 126.443 388.528C102.385 378.352 80.7863 363.793 62.2467 345.253ZM301.699 336.166C313.928 327.317 324.896 316.835 334.282 305.034C342.149 295.142 348.9 284.325 354.355 272.775C364.433 251.432 370.076 227.586 370.076 202.419C370.076 111.296 296.206 37.4253 205.083 37.4253C113.96 37.4253 40.0895 111.294 40.0895 202.418C40.0895 293.541 113.96 367.411 205.084 367.411C227.413 367.411 248.701 362.967 268.126 354.928C280.091 349.976 291.347 343.658 301.699 336.166ZM467.229 460.716C473.507 454.439 473.507 444.26 467.229 437.982L360.595 331.348C356.601 336.153 352.378 340.794 347.919 345.253C341.671 351.502 335.068 357.286 328.147 362.615L435.371 469.839C438.511 472.977 442.624 474.547 446.739 474.547C450.853 474.547 454.967 472.978 458.106 469.839L467.229 460.716ZM223.582 183.91H281.071C291.292 183.91 299.574 192.194 299.575 202.414C299.575 206.778 298.062 210.786 295.533 213.951C292.143 218.195 286.926 220.916 281.072 220.916H228.303H223.583V225.63V278.406C223.583 287.081 217.613 294.358 209.559 296.361C208.124 296.717 206.625 296.909 205.08 296.909C194.861 296.909 186.577 288.625 186.577 278.406V220.917H129.087C118.868 220.917 110.584 212.633 110.584 202.414C110.584 192.195 118.868 183.911 129.087 183.911H186.576V126.421C186.576 116.202 194.86 107.918 205.079 107.918C215.298 107.918 223.582 116.202 223.582 126.421V183.91Z"
-          />
-        </svg>
-      </div>
-    
-    </div>
-  
-            {% else %}
-            
-    <div
-      
-      id="{{image.id}}"
-      style=""
-      class="gem-slider-item w-full gem-slider-item-g7e8oud_21-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item undefined"
+      style="outline-color:var(--g-c-brand, brand)"
+      class="gem-slider-item w-full gem-slider-item-g7e8oud_21-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item data-[outline=active]:outline p-[1px]"
     >
       
       <img
@@ -477,10 +439,50 @@
     
     </div>
   
-          {%- endif -%}
-      {% endfor %}
-      {%- endif -%}
+          {% else %}
+          
+    <div
+      data-outline="deactive"
+      id="{{image.id}}"
+      style="outline-color:var(--g-c-brand, brand)"
+      class="gem-slider-item w-full gem-slider-item-g7e8oud_21-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item data-[outline=active]:outline undefined"
+    >
       
+      <img
+    
+    draggable="false"
+    class="gp_lazyload"
+    data-src="{{image.src | product_img_url: '1024x1024'}}" data-srcset="{{image.src | product_img_url: '1024x1024'}} 768w,{{image.src | product_img_url: '1024x1024'}} 1024w,{{image.src | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{image.width}}" height="{{image.height}}" alt="{{image.alt}}" priority
+    sizes="100vw"
+    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%;--w-tablet:100%;--w-mobile:100%"
+  />
+
+      <div class="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/50 opacity-0 transition-opacity duration-100 group-hover:opacity-100" 
+      style="--d: none;--d-mobile: none;--d-tablet: none;" 
+      >
+        <svg
+          height="100%"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          viewBox="0 0 512 512"
+          color="#fff"
+        >
+          <path
+            fill="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M62.2467 345.253C43.7072 326.714 29.1474 305.116 18.9714 281.057C8.42839 256.13 3.08301 229.671 3.08301 202.418C3.08301 175.165 8.43012 148.707 18.974 123.78C29.15 99.7213 43.7098 78.123 62.2485 59.5834C80.788 41.0439 102.386 26.4841 126.445 16.3081C151.372 5.76422 177.831 0.417969 205.084 0.417969C232.337 0.417969 258.794 5.76421 283.722 16.3064C307.78 26.4823 329.379 41.0422 347.918 59.5817C366.458 78.1212 381.017 99.7196 391.194 123.778C401.737 148.706 407.083 175.163 407.083 202.417C407.083 229.671 401.737 256.129 391.194 281.056C388.406 287.648 385.277 294.048 381.839 300.257L493.397 411.815C514.091 432.511 514.091 466.187 493.395 486.883L484.272 496.006C474.245 506.032 460.915 511.553 446.738 511.553C432.559 511.553 419.228 506.032 409.202 496.006L296.022 382.824C291.996 384.854 287.898 386.762 283.721 388.528C258.794 399.073 232.336 404.419 205.082 404.419C177.828 404.419 151.371 399.071 126.443 388.528C102.385 378.352 80.7863 363.793 62.2467 345.253ZM301.699 336.166C313.928 327.317 324.896 316.835 334.282 305.034C342.149 295.142 348.9 284.325 354.355 272.775C364.433 251.432 370.076 227.586 370.076 202.419C370.076 111.296 296.206 37.4253 205.083 37.4253C113.96 37.4253 40.0895 111.294 40.0895 202.418C40.0895 293.541 113.96 367.411 205.084 367.411C227.413 367.411 248.701 362.967 268.126 354.928C280.091 349.976 291.347 343.658 301.699 336.166ZM467.229 460.716C473.507 454.439 473.507 444.26 467.229 437.982L360.595 331.348C356.601 336.153 352.378 340.794 347.919 345.253C341.671 351.502 335.068 357.286 328.147 362.615L435.371 469.839C438.511 472.977 442.624 474.547 446.739 474.547C450.853 474.547 454.967 472.978 458.106 469.839L467.229 460.716ZM223.582 183.91H281.071C291.292 183.91 299.574 192.194 299.575 202.414C299.575 206.778 298.062 210.786 295.533 213.951C292.143 218.195 286.926 220.916 281.072 220.916H228.303H223.583V225.63V278.406C223.583 287.081 217.613 294.358 209.559 296.361C208.124 296.717 206.625 296.909 205.08 296.909C194.861 296.909 186.577 288.625 186.577 278.406V220.917H129.087C118.868 220.917 110.584 212.633 110.584 202.414C110.584 192.195 118.868 183.911 129.087 183.911H186.576V126.421C186.576 116.202 194.86 107.918 205.079 107.918C215.298 107.918 223.582 116.202 223.582 126.421V183.91Z"
+          />
+        </svg>
+      </div>
+    
+    </div>
+  
+        {%- endif -%}
+    {% endfor %}
+    {%- endif -%}
+    
           </div>
         </div>
         
@@ -510,16 +512,17 @@
       </div>
     </gp-carousel>
   
-        {%- endif -%}
-          <div type="grid-gallery"
-    class="grid-gallery h-fit w-full flex-wrap tablet:flex-wrap mobile:flex-wrap"
-    style="--d:flex;--d-mobile:flex;--d-tablet:flex;--fd:row;--fd-tablet:row;--fd-mobile:row;--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--gg:5px;--gg-tablet:5px;--gg-mobile:5px;--ai:flex-start;--ai-tablet:flex-start;--ai-mobile:flex-start;--mt:var(--g-s-s);--mt-mobile:var(--g-s-s)"
+  
+            
+  <div type="grid-gallery"
+    class="grid-gallery flex h-fit w-full flex-wrap scrollbar-track:rounded-2xl scrollbar-thumb:rounded-2xl scrollbar-thumb:bg-gray-400 !flex-nowrap mobile:!flex-nowrap tablet:!flex-nowrap"
+    style="--d:flex;--d-mobile:flex;--d-tablet:flex;--gg:5px;--gg-tablet:5px;--gg-mobile:5px"
   > 
-{%- if product.images.size > 1 -%}
-  {%- for image in product.images -%}
-    {%- if featured_image != null and image.id == featured_image.id -%}
-    <div aria-hidden id="{{image.id}}" class="image-item outline p-[1px] group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
-    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);--h: fit-content;--h-tablet: fit-content;--h-mobile: fit-content;--minh: fit-content;--minh-tablet: fit-content;--minh-mobile: fit-content;max-width: 100%;outline-color: var(--g-c-brand, brand);"
+    {%- if product.images.size > 1 -%}
+    {%- for image in product.images -%}
+      {%- if featured_image != null and image.id == featured_image.id -%}
+      <div aria-hidden id="{{image.id}}" data-outline="active" class="image-item p-[1px] data-[outline=active]:outline group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
+    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);outline-color: var(--g-c-brand, brand);max-width: 100%;"
     >
   
     <img
@@ -550,9 +553,9 @@
     </svg>
   </div>
   </div>
-    {% else %}
-    <div aria-hidden id="{{image.id}}" class="image-item undefined group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
-    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);--h: fit-content;--h-tablet: fit-content;--h-mobile: fit-content;--minh: fit-content;--minh-tablet: fit-content;--minh-mobile: fit-content;max-width: 100%;"
+      {% else %}
+      <div aria-hidden id="{{image.id}}" data-outline="deactive" class="image-item undefined data-[outline=active]:outline group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
+    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);outline-color: var(--g-c-brand, brand);max-width: 100%;"
     >
   
     <img
@@ -583,11 +586,12 @@
     </svg>
   </div>
   </div>
+      {%- endif -%}
+    {% endfor %}
     {%- endif -%}
-  {% endfor %}
-  {%- endif -%}
   </div>
-        </div>
+          </div>
+        {%- endif -%}
       </div>
   </gp-product-images>
   
@@ -610,6 +614,7 @@
         style="--tt:default"
       >
       <h2
+        data-gp-text
         class=""
         style="--ta:left;--line-clamp:1;--c:#242424;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -647,6 +652,7 @@
         style="--tdt:1"
       >
       <div
+        data-gp-text
         class="gp-price decoration-g-text-1"
         style="--tdc:text-1;--ta:left;--c:#424242;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -679,6 +685,7 @@
         style="--tdt:1"
       >
       <div
+        data-gp-text
         class="gp-price line-through g-paragraph-1"
         style="--tdc:#B4B4B4;--ta:left;--c:#B4B4B4"
       >
@@ -880,6 +887,7 @@
         style="--tt:default;--mb:var(--g-s-s);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
       >
       <div
+        data-gp-text
         class="gp-text"
         style="--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#242424;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -1038,6 +1046,7 @@
         style="--tt:default;--mb:var(--g-s-2xl);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
       >
       <div
+        data-gp-text
         class="g-paragraph-1 gp-text"
         style="--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#424242"
       >
@@ -1121,25 +1130,25 @@
   {%- endif -%}
   <gp-product-images gp-data='{"id":"g-tl-lSniA", "setting":{"featureImageVisible":{"desktop":true,"mobile":true,"tablet":true},"hoverEffect":"none","zoomType":"default","zoom":1.5,"otherImage":0,"clickEffect":"none","galleryVisible":{"desktop":false,"mobile":false,"tablet":false},"type":{"desktop":"images","mobile":"images","tablet":"images"},"largeViewInPopup":{"desktop":false,"mobile":false,"tablet":false},"slidesToShow":{"desktop":5,"tablet":5,"mobile":3},"numberPerRow":{"desktop":5,"tablet":5,"mobile":3},"showActiveStatus":true,"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"loop":{"desktop":true,"mobile":true,"tablet":true},"pauseOnHover":true,"speed":1,"arrowIcon":"","dragToScroll":true}, "styles":{"ftAspectRatio":{"desktop":"1","mobile":"1","tablet":"1"},"ftAspectWidth":{"desktop":0,"mobile":0,"tablet":0},"ftAspectHeight":{"desktop":0,"mobile":0,"tablet":0},"ftLayout":{"desktop":"cover","mobile":"cover","tablet":"cover"},"ftFullWidth":{"desktop":false,"mobile":false,"tablet":false},"ftWidth":{"desktop":"80px","mobile":"80px","tablet":"80px"},"ftAlign":{"desktop":"center","mobile":"center","tablet":"center"},"aspectRatio":{"desktop":"1","mobile":"1","tablet":"1"},"aspectWidth":{"desktop":0,"mobile":0,"tablet":0},"aspectHeight":{"desktop":0,"mobile":0,"tablet":0},"layout":{"desktop":"cover","mobile":"cover","tablet":"cover"},"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"300px","mobile":"300px","tablet":"300px"},"align":{"desktop":"flex-start","mobile":"flex-start","tablet":"flex-start"},"position":{"desktop":"bottom-left"},"gallerySpacing":{"desktop":"var(--g-s-s)","mobile":"var(--g-s-s)"},"spacing":{"desktop":"var(--g-s-s)","mobile":"var(--g-s-s)"},"verticalLayout":{"desktop":false,"mobile":false,"tablet":false},"verticalLayoutRow":{"desktop":true,"mobile":true,"tablet":true},"dotColor":{"desktop":"bg-1"},"dotActiveColor":{"desktop":"highlight"}}, "product":{{product | json | escape}}}'>
     <div
-        class="flex w-full  mobile:overflow-visible flex-col tablet:flex-col mobile:flex-col"
+        class="flex w-full flex-col tablet:flex-col mobile:flex-col"
         style="--jc:start;--jc-tablet:start;--jc-mobile:start"
       >
         <div
-    class="featured-image-root"
-    style="--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--d:flex;--d-mobile:flex;--d-tablet:flex;--w:80px;--w-tablet:80px;--w-mobile:80px;--maxw:80px;--maxw-tablet:80px;--maxw-mobile:80px"
+  class="featured-image-root gp-product-images-ft flex"
+  style="--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--d:flex;--d-mobile:flex;--d-tablet:flex;--w:80px;--w-tablet:80px;--w-mobile:80px;--maxw:80px;--maxw-tablet:80px;--maxw-mobile:80px"
+>
+  <div role="presentation" 
+    class="featured-image-wrapper relative flex w-full overflow-hidden"
+    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1"
   >
-    <div role="presentation" 
-      class="featured-image-wrapper relative flex w-full overflow-hidden"
-      style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1"
-    >
-    <div class="flex w-full justify-center">
-    <div class="featured-image group relative w-full">
-      <img
+  <div class="flex w-full items-start justify-center">
+  <div class="featured-image group relative w-full overflow-hidden">
+    <img
     id="{%- if featured_image != null -%}
             {{featured_image.id}}
             {%- endif -%}"
     draggable="false"
-    class="w-full featured-image-only transition-opacity gp_lazyload"
+    class="w-full featured-image-only w-full transition-opacity gp_lazyload"
     data-src="{%- if featured_image != null -%}
               {{featured_image.src | img_url: '1024x1024'}}
             {%- else -%}
@@ -1166,80 +1175,40 @@
     sizes="100vw"
     style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%"
   />
-      
-      
-    </div>
-    </div>
-    </div>
+    
+    
+  </div>
+  </div>
+  </div>
 </div>
-        <div
-          class="gallery-wrapper h-fit max-w-full overflow-auto justify-start tablet:justify-start mobile:justify-start"
-          style="--fs:1.23;--d:none;--d-mobile:none;--d-tablet:none;--w:100%;--w-tablet:100%;--w-mobile:100%;--maxw:100%;--maxw-tablet:100%;--maxw-mobile:100%"
-        >
         {%- if product.images.size > 1 -%}
-          
+          <div
+            class="gallery-wrapper gp-product-images-gallery inline-flex h-fit max-w-full justify-start tablet:justify-start mobile:justify-start"
+            style="--fs:1.23;--d:none;--d-mobile:none;--d-tablet:none;--w:300px;--w-tablet:300px;--w-mobile:300px;--maxw:300px;--maxw-tablet:300px;--maxw-mobile:300px;--mt:var(--g-s-s);--mt-mobile:var(--g-s-s);--mt-tablet:var(--g-s-s)"
+          >
+            
   <script src="https://d3kbi0je7pp4lw.cloudfront.net/assets/gp-carousel.js" defer="defer"></script>
-    <gp-carousel type="grid-carousel" id="gp-root-carousel-g-tl-lSniA-{{product.id}}" class="flex-1 w-full carousel-galley"  gp-data='{"id":"g-tl-lSniA-{{product.id}}","setting":{"loop":{"desktop":true,"mobile":true,"tablet":true},"slidesToShow":{"desktop":5,"tablet":5,"mobile":3},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"enableDrag":true,"vertical":{"desktop":false,"mobile":false,"tablet":false},"dotActiveColor":{"desktop":"highlight"},"dotColor":{"desktop":"bg-1"},"arrowCustom":""},"styles":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"100%","tablet":"100%","mobile":"100%"},"spacing":{"desktop":5,"tablet":5,"mobile":5},"adaptiveHeight":{"desktop":true,"mobile":true,"tablet":true}}}' style="--d:none;--d-mobile:none;--d-tablet:none">
+    <gp-carousel type="grid-carousel" id="gp-root-carousel-g-tl-lSniA-{{product.id}}" class="flex-1 w-full carousel-galley"  gp-data='{"id":"g-tl-lSniA-{{product.id}}","setting":{"loop":{"desktop":true,"mobile":true,"tablet":true},"slidesToShow":{"desktop":5,"mobile":3,"tablet":5},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"enableDrag":true,"vertical":{"desktop":false,"mobile":false,"tablet":false},"dotActiveColor":{"desktop":"highlight"},"dotColor":{"desktop":"bg-1"},"arrowCustom":""},"styles":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"100%","tablet":"100%","mobile":"100%"},"spacing":{"desktop":5,"tablet":5,"mobile":5},"adaptiveHeight":{"desktop":true,"mobile":true,"tablet":true}},"isHiddenArrowWhenDisabled":true}' style="--d:none;--d-mobile:none;--d-tablet:none">
       <div class="hidden aspect-square w-[12px] rounded-full shadow-md"></div>
       <div
         
-        class="relative gp-carousel-wrapper"
-        style="--mt:var(--g-s-s);--mt-mobile:var(--g-s-s);--h:auto;--h-tablet:auto;--h-mobile:auto;--w:100%;--w-tablet:100%;--w-mobile:100%"
+        class="relative gp-carousel-wrapper mobile:!block tablet:!block !block"
+        style="--h:auto;--h-tablet:auto;--h-mobile:auto;--w:100%;--w-tablet:100%;--w-mobile:100%;visibility:hidden"
       >
         <div
           class="h-full"
         >
           <div id="gp-carousel-g-tl-lSniA-{{product.id}}" class="gem-slider h-full overflow-hidden">
             
-      {%- if product.images.size > 1 -%}
-      {%- for image in product.images -%}
-          {%- if featured_image != null and image.id == featured_image.id -%}
-            
+    {%- if product.images.size > 1 -%}
+    {%- for image in product.images -%}
+        {%- if featured_image != null and image.id == featured_image.id -%}
+          
     <div
-      
+      data-outline="active"
       id="{{image.id}}"
-      style=""
-      class="gem-slider-item w-full gem-slider-item-g-tl-lSniA-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item outline p-[1px]"
-    >
-      
-      <img
-    
-    draggable="false"
-    class="gp_lazyload"
-    data-src="{{image.src | product_img_url: '1024x1024'}}" data-srcset="{{image.src | product_img_url: '1024x1024'}} 768w,{{image.src | product_img_url: '1024x1024'}} 1024w,{{image.src | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{image.width}}" height="{{image.height}}" alt="{{image.alt}}" priority
-    sizes="100vw"
-    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%;--w-tablet:100%;--w-mobile:100%"
-  />
-
-      <div class="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/50 opacity-0 transition-opacity duration-100 group-hover:opacity-100" 
-      style="--d: none;--d-mobile: none;--d-tablet: none;outline-color: var(--g-c-brand, brand);" 
-      >
-        <svg
-          height="100%"
-          width="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          viewBox="0 0 512 512"
-          color="#fff"
-        >
-          <path
-            fill="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M62.2467 345.253C43.7072 326.714 29.1474 305.116 18.9714 281.057C8.42839 256.13 3.08301 229.671 3.08301 202.418C3.08301 175.165 8.43012 148.707 18.974 123.78C29.15 99.7213 43.7098 78.123 62.2485 59.5834C80.788 41.0439 102.386 26.4841 126.445 16.3081C151.372 5.76422 177.831 0.417969 205.084 0.417969C232.337 0.417969 258.794 5.76421 283.722 16.3064C307.78 26.4823 329.379 41.0422 347.918 59.5817C366.458 78.1212 381.017 99.7196 391.194 123.778C401.737 148.706 407.083 175.163 407.083 202.417C407.083 229.671 401.737 256.129 391.194 281.056C388.406 287.648 385.277 294.048 381.839 300.257L493.397 411.815C514.091 432.511 514.091 466.187 493.395 486.883L484.272 496.006C474.245 506.032 460.915 511.553 446.738 511.553C432.559 511.553 419.228 506.032 409.202 496.006L296.022 382.824C291.996 384.854 287.898 386.762 283.721 388.528C258.794 399.073 232.336 404.419 205.082 404.419C177.828 404.419 151.371 399.071 126.443 388.528C102.385 378.352 80.7863 363.793 62.2467 345.253ZM301.699 336.166C313.928 327.317 324.896 316.835 334.282 305.034C342.149 295.142 348.9 284.325 354.355 272.775C364.433 251.432 370.076 227.586 370.076 202.419C370.076 111.296 296.206 37.4253 205.083 37.4253C113.96 37.4253 40.0895 111.294 40.0895 202.418C40.0895 293.541 113.96 367.411 205.084 367.411C227.413 367.411 248.701 362.967 268.126 354.928C280.091 349.976 291.347 343.658 301.699 336.166ZM467.229 460.716C473.507 454.439 473.507 444.26 467.229 437.982L360.595 331.348C356.601 336.153 352.378 340.794 347.919 345.253C341.671 351.502 335.068 357.286 328.147 362.615L435.371 469.839C438.511 472.977 442.624 474.547 446.739 474.547C450.853 474.547 454.967 472.978 458.106 469.839L467.229 460.716ZM223.582 183.91H281.071C291.292 183.91 299.574 192.194 299.575 202.414C299.575 206.778 298.062 210.786 295.533 213.951C292.143 218.195 286.926 220.916 281.072 220.916H228.303H223.583V225.63V278.406C223.583 287.081 217.613 294.358 209.559 296.361C208.124 296.717 206.625 296.909 205.08 296.909C194.861 296.909 186.577 288.625 186.577 278.406V220.917H129.087C118.868 220.917 110.584 212.633 110.584 202.414C110.584 192.195 118.868 183.911 129.087 183.911H186.576V126.421C186.576 116.202 194.86 107.918 205.079 107.918C215.298 107.918 223.582 116.202 223.582 126.421V183.91Z"
-          />
-        </svg>
-      </div>
-    
-    </div>
-  
-            {% else %}
-            
-    <div
-      
-      id="{{image.id}}"
-      style=""
-      class="gem-slider-item w-full gem-slider-item-g-tl-lSniA-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item undefined"
+      style="outline-color:var(--g-c-brand, brand)"
+      class="gem-slider-item w-full gem-slider-item-g-tl-lSniA-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item data-[outline=active]:outline p-[1px]"
     >
       
       <img
@@ -1273,10 +1242,50 @@
     
     </div>
   
-          {%- endif -%}
-      {% endfor %}
-      {%- endif -%}
+          {% else %}
+          
+    <div
+      data-outline="deactive"
+      id="{{image.id}}"
+      style="outline-color:var(--g-c-brand, brand)"
+      class="gem-slider-item w-full gem-slider-item-g-tl-lSniA-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item data-[outline=active]:outline undefined"
+    >
       
+      <img
+    
+    draggable="false"
+    class="gp_lazyload"
+    data-src="{{image.src | product_img_url: '1024x1024'}}" data-srcset="{{image.src | product_img_url: '1024x1024'}} 768w,{{image.src | product_img_url: '1024x1024'}} 1024w,{{image.src | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{image.width}}" height="{{image.height}}" alt="{{image.alt}}" priority
+    sizes="100vw"
+    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%;--w-tablet:100%;--w-mobile:100%"
+  />
+
+      <div class="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/50 opacity-0 transition-opacity duration-100 group-hover:opacity-100" 
+      style="--d: none;--d-mobile: none;--d-tablet: none;" 
+      >
+        <svg
+          height="100%"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          viewBox="0 0 512 512"
+          color="#fff"
+        >
+          <path
+            fill="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M62.2467 345.253C43.7072 326.714 29.1474 305.116 18.9714 281.057C8.42839 256.13 3.08301 229.671 3.08301 202.418C3.08301 175.165 8.43012 148.707 18.974 123.78C29.15 99.7213 43.7098 78.123 62.2485 59.5834C80.788 41.0439 102.386 26.4841 126.445 16.3081C151.372 5.76422 177.831 0.417969 205.084 0.417969C232.337 0.417969 258.794 5.76421 283.722 16.3064C307.78 26.4823 329.379 41.0422 347.918 59.5817C366.458 78.1212 381.017 99.7196 391.194 123.778C401.737 148.706 407.083 175.163 407.083 202.417C407.083 229.671 401.737 256.129 391.194 281.056C388.406 287.648 385.277 294.048 381.839 300.257L493.397 411.815C514.091 432.511 514.091 466.187 493.395 486.883L484.272 496.006C474.245 506.032 460.915 511.553 446.738 511.553C432.559 511.553 419.228 506.032 409.202 496.006L296.022 382.824C291.996 384.854 287.898 386.762 283.721 388.528C258.794 399.073 232.336 404.419 205.082 404.419C177.828 404.419 151.371 399.071 126.443 388.528C102.385 378.352 80.7863 363.793 62.2467 345.253ZM301.699 336.166C313.928 327.317 324.896 316.835 334.282 305.034C342.149 295.142 348.9 284.325 354.355 272.775C364.433 251.432 370.076 227.586 370.076 202.419C370.076 111.296 296.206 37.4253 205.083 37.4253C113.96 37.4253 40.0895 111.294 40.0895 202.418C40.0895 293.541 113.96 367.411 205.084 367.411C227.413 367.411 248.701 362.967 268.126 354.928C280.091 349.976 291.347 343.658 301.699 336.166ZM467.229 460.716C473.507 454.439 473.507 444.26 467.229 437.982L360.595 331.348C356.601 336.153 352.378 340.794 347.919 345.253C341.671 351.502 335.068 357.286 328.147 362.615L435.371 469.839C438.511 472.977 442.624 474.547 446.739 474.547C450.853 474.547 454.967 472.978 458.106 469.839L467.229 460.716ZM223.582 183.91H281.071C291.292 183.91 299.574 192.194 299.575 202.414C299.575 206.778 298.062 210.786 295.533 213.951C292.143 218.195 286.926 220.916 281.072 220.916H228.303H223.583V225.63V278.406C223.583 287.081 217.613 294.358 209.559 296.361C208.124 296.717 206.625 296.909 205.08 296.909C194.861 296.909 186.577 288.625 186.577 278.406V220.917H129.087C118.868 220.917 110.584 212.633 110.584 202.414C110.584 192.195 118.868 183.911 129.087 183.911H186.576V126.421C186.576 116.202 194.86 107.918 205.079 107.918C215.298 107.918 223.582 116.202 223.582 126.421V183.91Z"
+          />
+        </svg>
+      </div>
+    
+    </div>
+  
+        {%- endif -%}
+    {% endfor %}
+    {%- endif -%}
+    
           </div>
         </div>
         
@@ -1306,16 +1315,17 @@
       </div>
     </gp-carousel>
   
-        {%- endif -%}
-          <div type="grid-gallery"
-    class="grid-gallery h-fit w-full flex-wrap tablet:flex-wrap mobile:flex-wrap"
-    style="--d:flex;--d-mobile:flex;--d-tablet:flex;--fd:row;--fd-tablet:row;--fd-mobile:row;--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--gg:5px;--gg-tablet:5px;--gg-mobile:5px;--ai:flex-start;--ai-tablet:flex-start;--ai-mobile:flex-start;--mt:var(--g-s-s);--mt-mobile:var(--g-s-s)"
+  
+            
+  <div type="grid-gallery"
+    class="grid-gallery flex h-fit w-full flex-wrap scrollbar-track:rounded-2xl scrollbar-thumb:rounded-2xl scrollbar-thumb:bg-gray-400 !flex-nowrap mobile:!flex-nowrap tablet:!flex-nowrap"
+    style="--d:flex;--d-mobile:flex;--d-tablet:flex;--gg:5px;--gg-tablet:5px;--gg-mobile:5px"
   > 
-{%- if product.images.size > 1 -%}
-  {%- for image in product.images -%}
-    {%- if featured_image != null and image.id == featured_image.id -%}
-    <div aria-hidden id="{{image.id}}" class="image-item outline p-[1px] group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
-    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);--h: fit-content;--h-tablet: fit-content;--h-mobile: fit-content;--minh: fit-content;--minh-tablet: fit-content;--minh-mobile: fit-content;max-width: 100%;outline-color: var(--g-c-brand, brand);"
+    {%- if product.images.size > 1 -%}
+    {%- for image in product.images -%}
+      {%- if featured_image != null and image.id == featured_image.id -%}
+      <div aria-hidden id="{{image.id}}" data-outline="active" class="image-item p-[1px] data-[outline=active]:outline group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
+    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);outline-color: var(--g-c-brand, brand);max-width: 100%;"
     >
   
     <img
@@ -1346,9 +1356,9 @@
     </svg>
   </div>
   </div>
-    {% else %}
-    <div aria-hidden id="{{image.id}}" class="image-item undefined group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
-    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);--h: fit-content;--h-tablet: fit-content;--h-mobile: fit-content;--minh: fit-content;--minh-tablet: fit-content;--minh-mobile: fit-content;max-width: 100%;"
+      {% else %}
+      <div aria-hidden id="{{image.id}}" data-outline="deactive" class="image-item undefined data-[outline=active]:outline group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
+    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);outline-color: var(--g-c-brand, brand);max-width: 100%;"
     >
   
     <img
@@ -1379,11 +1389,12 @@
     </svg>
   </div>
   </div>
+      {%- endif -%}
+    {% endfor %}
     {%- endif -%}
-  {% endfor %}
-  {%- endif -%}
   </div>
-        </div>
+          </div>
+        {%- endif -%}
       </div>
   </gp-product-images>
   
@@ -1406,6 +1417,7 @@
         style="--tt:default"
       >
       <h2
+        data-gp-text
         class=""
         style="--ta:left;--line-clamp:1;--c:#242424;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -1443,6 +1455,7 @@
         style="--tdt:1"
       >
       <div
+        data-gp-text
         class="gp-price decoration-g-text-1"
         style="--tdc:text-1;--ta:left;--c:#424242;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -1475,6 +1488,7 @@
         style="--tdt:1"
       >
       <div
+        data-gp-text
         class="gp-price line-through g-paragraph-1"
         style="--tdc:#B4B4B4;--ta:left;--c:#B4B4B4"
       >
@@ -1676,6 +1690,7 @@
         style="--tt:default;--mb:var(--g-s-s);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
       >
       <div
+        data-gp-text
         class="gp-text"
         style="--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#242424;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -1834,6 +1849,7 @@
         style="--tt:default;--mb:var(--g-s-2xl);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
       >
       <div
+        data-gp-text
         class="g-paragraph-1 gp-text"
         style="--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#424242"
       >
@@ -1917,25 +1933,25 @@
   {%- endif -%}
   <gp-product-images gp-data='{"id":"gukO-g-tiu", "setting":{"featureImageVisible":{"desktop":true,"mobile":true,"tablet":true},"hoverEffect":"none","zoomType":"default","zoom":1.5,"otherImage":0,"clickEffect":"none","galleryVisible":{"desktop":false,"mobile":false,"tablet":false},"type":{"desktop":"images","mobile":"images","tablet":"images"},"largeViewInPopup":{"desktop":false,"mobile":false,"tablet":false},"slidesToShow":{"desktop":5,"tablet":5,"mobile":3},"numberPerRow":{"desktop":5,"tablet":5,"mobile":3},"showActiveStatus":true,"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"loop":{"desktop":true,"mobile":true,"tablet":true},"pauseOnHover":true,"speed":1,"arrowIcon":"","dragToScroll":true}, "styles":{"ftAspectRatio":{"desktop":"1","mobile":"1","tablet":"1"},"ftAspectWidth":{"desktop":0,"mobile":0,"tablet":0},"ftAspectHeight":{"desktop":0,"mobile":0,"tablet":0},"ftLayout":{"desktop":"cover","mobile":"cover","tablet":"cover"},"ftFullWidth":{"desktop":false,"mobile":false,"tablet":false},"ftWidth":{"desktop":"80px","mobile":"80px","tablet":"80px"},"ftAlign":{"desktop":"center","mobile":"center","tablet":"center"},"aspectRatio":{"desktop":"1","mobile":"1","tablet":"1"},"aspectWidth":{"desktop":0,"mobile":0,"tablet":0},"aspectHeight":{"desktop":0,"mobile":0,"tablet":0},"layout":{"desktop":"cover","mobile":"cover","tablet":"cover"},"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"300px","mobile":"300px","tablet":"300px"},"align":{"desktop":"flex-start","mobile":"flex-start","tablet":"flex-start"},"position":{"desktop":"bottom-left"},"gallerySpacing":{"desktop":"var(--g-s-s)","mobile":"var(--g-s-s)"},"spacing":{"desktop":"var(--g-s-s)","mobile":"var(--g-s-s)"},"verticalLayout":{"desktop":false,"mobile":false,"tablet":false},"verticalLayoutRow":{"desktop":true,"mobile":true,"tablet":true},"dotColor":{"desktop":"bg-1"},"dotActiveColor":{"desktop":"highlight"}}, "product":{{product | json | escape}}}'>
     <div
-        class="flex w-full  mobile:overflow-visible flex-col tablet:flex-col mobile:flex-col"
+        class="flex w-full flex-col tablet:flex-col mobile:flex-col"
         style="--jc:start;--jc-tablet:start;--jc-mobile:start"
       >
         <div
-    class="featured-image-root"
-    style="--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--d:flex;--d-mobile:flex;--d-tablet:flex;--w:80px;--w-tablet:80px;--w-mobile:80px;--maxw:80px;--maxw-tablet:80px;--maxw-mobile:80px"
+  class="featured-image-root gp-product-images-ft flex"
+  style="--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--d:flex;--d-mobile:flex;--d-tablet:flex;--w:80px;--w-tablet:80px;--w-mobile:80px;--maxw:80px;--maxw-tablet:80px;--maxw-mobile:80px"
+>
+  <div role="presentation" 
+    class="featured-image-wrapper relative flex w-full overflow-hidden"
+    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1"
   >
-    <div role="presentation" 
-      class="featured-image-wrapper relative flex w-full overflow-hidden"
-      style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1"
-    >
-    <div class="flex w-full justify-center">
-    <div class="featured-image group relative w-full">
-      <img
+  <div class="flex w-full items-start justify-center">
+  <div class="featured-image group relative w-full overflow-hidden">
+    <img
     id="{%- if featured_image != null -%}
             {{featured_image.id}}
             {%- endif -%}"
     draggable="false"
-    class="w-full featured-image-only transition-opacity gp_lazyload"
+    class="w-full featured-image-only w-full transition-opacity gp_lazyload"
     data-src="{%- if featured_image != null -%}
               {{featured_image.src | img_url: '1024x1024'}}
             {%- else -%}
@@ -1962,80 +1978,40 @@
     sizes="100vw"
     style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%"
   />
-      
-      
-    </div>
-    </div>
-    </div>
+    
+    
+  </div>
+  </div>
+  </div>
 </div>
-        <div
-          class="gallery-wrapper h-fit max-w-full overflow-auto justify-start tablet:justify-start mobile:justify-start"
-          style="--fs:1.23;--d:none;--d-mobile:none;--d-tablet:none;--w:100%;--w-tablet:100%;--w-mobile:100%;--maxw:100%;--maxw-tablet:100%;--maxw-mobile:100%"
-        >
         {%- if product.images.size > 1 -%}
-          
+          <div
+            class="gallery-wrapper gp-product-images-gallery inline-flex h-fit max-w-full justify-start tablet:justify-start mobile:justify-start"
+            style="--fs:1.23;--d:none;--d-mobile:none;--d-tablet:none;--w:300px;--w-tablet:300px;--w-mobile:300px;--maxw:300px;--maxw-tablet:300px;--maxw-mobile:300px;--mt:var(--g-s-s);--mt-mobile:var(--g-s-s);--mt-tablet:var(--g-s-s)"
+          >
+            
   <script src="https://d3kbi0je7pp4lw.cloudfront.net/assets/gp-carousel.js" defer="defer"></script>
-    <gp-carousel type="grid-carousel" id="gp-root-carousel-gukO-g-tiu-{{product.id}}" class="flex-1 w-full carousel-galley"  gp-data='{"id":"gukO-g-tiu-{{product.id}}","setting":{"loop":{"desktop":true,"mobile":true,"tablet":true},"slidesToShow":{"desktop":5,"tablet":5,"mobile":3},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"enableDrag":true,"vertical":{"desktop":false,"mobile":false,"tablet":false},"dotActiveColor":{"desktop":"highlight"},"dotColor":{"desktop":"bg-1"},"arrowCustom":""},"styles":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"100%","tablet":"100%","mobile":"100%"},"spacing":{"desktop":5,"tablet":5,"mobile":5},"adaptiveHeight":{"desktop":true,"mobile":true,"tablet":true}}}' style="--d:none;--d-mobile:none;--d-tablet:none">
+    <gp-carousel type="grid-carousel" id="gp-root-carousel-gukO-g-tiu-{{product.id}}" class="flex-1 w-full carousel-galley"  gp-data='{"id":"gukO-g-tiu-{{product.id}}","setting":{"loop":{"desktop":true,"mobile":true,"tablet":true},"slidesToShow":{"desktop":5,"mobile":3,"tablet":5},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"enableDrag":true,"vertical":{"desktop":false,"mobile":false,"tablet":false},"dotActiveColor":{"desktop":"highlight"},"dotColor":{"desktop":"bg-1"},"arrowCustom":""},"styles":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"100%","tablet":"100%","mobile":"100%"},"spacing":{"desktop":5,"tablet":5,"mobile":5},"adaptiveHeight":{"desktop":true,"mobile":true,"tablet":true}},"isHiddenArrowWhenDisabled":true}' style="--d:none;--d-mobile:none;--d-tablet:none">
       <div class="hidden aspect-square w-[12px] rounded-full shadow-md"></div>
       <div
         
-        class="relative gp-carousel-wrapper"
-        style="--mt:var(--g-s-s);--mt-mobile:var(--g-s-s);--h:auto;--h-tablet:auto;--h-mobile:auto;--w:100%;--w-tablet:100%;--w-mobile:100%"
+        class="relative gp-carousel-wrapper mobile:!block tablet:!block !block"
+        style="--h:auto;--h-tablet:auto;--h-mobile:auto;--w:100%;--w-tablet:100%;--w-mobile:100%;visibility:hidden"
       >
         <div
           class="h-full"
         >
           <div id="gp-carousel-gukO-g-tiu-{{product.id}}" class="gem-slider h-full overflow-hidden">
             
-      {%- if product.images.size > 1 -%}
-      {%- for image in product.images -%}
-          {%- if featured_image != null and image.id == featured_image.id -%}
-            
+    {%- if product.images.size > 1 -%}
+    {%- for image in product.images -%}
+        {%- if featured_image != null and image.id == featured_image.id -%}
+          
     <div
-      
+      data-outline="active"
       id="{{image.id}}"
-      style=""
-      class="gem-slider-item w-full gem-slider-item-gukO-g-tiu-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item outline p-[1px]"
-    >
-      
-      <img
-    
-    draggable="false"
-    class="gp_lazyload"
-    data-src="{{image.src | product_img_url: '1024x1024'}}" data-srcset="{{image.src | product_img_url: '1024x1024'}} 768w,{{image.src | product_img_url: '1024x1024'}} 1024w,{{image.src | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{image.width}}" height="{{image.height}}" alt="{{image.alt}}" priority
-    sizes="100vw"
-    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%;--w-tablet:100%;--w-mobile:100%"
-  />
-
-      <div class="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/50 opacity-0 transition-opacity duration-100 group-hover:opacity-100" 
-      style="--d: none;--d-mobile: none;--d-tablet: none;outline-color: var(--g-c-brand, brand);" 
-      >
-        <svg
-          height="100%"
-          width="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          viewBox="0 0 512 512"
-          color="#fff"
-        >
-          <path
-            fill="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M62.2467 345.253C43.7072 326.714 29.1474 305.116 18.9714 281.057C8.42839 256.13 3.08301 229.671 3.08301 202.418C3.08301 175.165 8.43012 148.707 18.974 123.78C29.15 99.7213 43.7098 78.123 62.2485 59.5834C80.788 41.0439 102.386 26.4841 126.445 16.3081C151.372 5.76422 177.831 0.417969 205.084 0.417969C232.337 0.417969 258.794 5.76421 283.722 16.3064C307.78 26.4823 329.379 41.0422 347.918 59.5817C366.458 78.1212 381.017 99.7196 391.194 123.778C401.737 148.706 407.083 175.163 407.083 202.417C407.083 229.671 401.737 256.129 391.194 281.056C388.406 287.648 385.277 294.048 381.839 300.257L493.397 411.815C514.091 432.511 514.091 466.187 493.395 486.883L484.272 496.006C474.245 506.032 460.915 511.553 446.738 511.553C432.559 511.553 419.228 506.032 409.202 496.006L296.022 382.824C291.996 384.854 287.898 386.762 283.721 388.528C258.794 399.073 232.336 404.419 205.082 404.419C177.828 404.419 151.371 399.071 126.443 388.528C102.385 378.352 80.7863 363.793 62.2467 345.253ZM301.699 336.166C313.928 327.317 324.896 316.835 334.282 305.034C342.149 295.142 348.9 284.325 354.355 272.775C364.433 251.432 370.076 227.586 370.076 202.419C370.076 111.296 296.206 37.4253 205.083 37.4253C113.96 37.4253 40.0895 111.294 40.0895 202.418C40.0895 293.541 113.96 367.411 205.084 367.411C227.413 367.411 248.701 362.967 268.126 354.928C280.091 349.976 291.347 343.658 301.699 336.166ZM467.229 460.716C473.507 454.439 473.507 444.26 467.229 437.982L360.595 331.348C356.601 336.153 352.378 340.794 347.919 345.253C341.671 351.502 335.068 357.286 328.147 362.615L435.371 469.839C438.511 472.977 442.624 474.547 446.739 474.547C450.853 474.547 454.967 472.978 458.106 469.839L467.229 460.716ZM223.582 183.91H281.071C291.292 183.91 299.574 192.194 299.575 202.414C299.575 206.778 298.062 210.786 295.533 213.951C292.143 218.195 286.926 220.916 281.072 220.916H228.303H223.583V225.63V278.406C223.583 287.081 217.613 294.358 209.559 296.361C208.124 296.717 206.625 296.909 205.08 296.909C194.861 296.909 186.577 288.625 186.577 278.406V220.917H129.087C118.868 220.917 110.584 212.633 110.584 202.414C110.584 192.195 118.868 183.911 129.087 183.911H186.576V126.421C186.576 116.202 194.86 107.918 205.079 107.918C215.298 107.918 223.582 116.202 223.582 126.421V183.91Z"
-          />
-        </svg>
-      </div>
-    
-    </div>
-  
-            {% else %}
-            
-    <div
-      
-      id="{{image.id}}"
-      style=""
-      class="gem-slider-item w-full gem-slider-item-gukO-g-tiu-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item undefined"
+      style="outline-color:var(--g-c-brand, brand)"
+      class="gem-slider-item w-full gem-slider-item-gukO-g-tiu-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item data-[outline=active]:outline p-[1px]"
     >
       
       <img
@@ -2069,10 +2045,50 @@
     
     </div>
   
-          {%- endif -%}
-      {% endfor %}
-      {%- endif -%}
+          {% else %}
+          
+    <div
+      data-outline="deactive"
+      id="{{image.id}}"
+      style="outline-color:var(--g-c-brand, brand)"
+      class="gem-slider-item w-full gem-slider-item-gukO-g-tiu-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item data-[outline=active]:outline undefined"
+    >
       
+      <img
+    
+    draggable="false"
+    class="gp_lazyload"
+    data-src="{{image.src | product_img_url: '1024x1024'}}" data-srcset="{{image.src | product_img_url: '1024x1024'}} 768w,{{image.src | product_img_url: '1024x1024'}} 1024w,{{image.src | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{image.width}}" height="{{image.height}}" alt="{{image.alt}}" priority
+    sizes="100vw"
+    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%;--w-tablet:100%;--w-mobile:100%"
+  />
+
+      <div class="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/50 opacity-0 transition-opacity duration-100 group-hover:opacity-100" 
+      style="--d: none;--d-mobile: none;--d-tablet: none;" 
+      >
+        <svg
+          height="100%"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          viewBox="0 0 512 512"
+          color="#fff"
+        >
+          <path
+            fill="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M62.2467 345.253C43.7072 326.714 29.1474 305.116 18.9714 281.057C8.42839 256.13 3.08301 229.671 3.08301 202.418C3.08301 175.165 8.43012 148.707 18.974 123.78C29.15 99.7213 43.7098 78.123 62.2485 59.5834C80.788 41.0439 102.386 26.4841 126.445 16.3081C151.372 5.76422 177.831 0.417969 205.084 0.417969C232.337 0.417969 258.794 5.76421 283.722 16.3064C307.78 26.4823 329.379 41.0422 347.918 59.5817C366.458 78.1212 381.017 99.7196 391.194 123.778C401.737 148.706 407.083 175.163 407.083 202.417C407.083 229.671 401.737 256.129 391.194 281.056C388.406 287.648 385.277 294.048 381.839 300.257L493.397 411.815C514.091 432.511 514.091 466.187 493.395 486.883L484.272 496.006C474.245 506.032 460.915 511.553 446.738 511.553C432.559 511.553 419.228 506.032 409.202 496.006L296.022 382.824C291.996 384.854 287.898 386.762 283.721 388.528C258.794 399.073 232.336 404.419 205.082 404.419C177.828 404.419 151.371 399.071 126.443 388.528C102.385 378.352 80.7863 363.793 62.2467 345.253ZM301.699 336.166C313.928 327.317 324.896 316.835 334.282 305.034C342.149 295.142 348.9 284.325 354.355 272.775C364.433 251.432 370.076 227.586 370.076 202.419C370.076 111.296 296.206 37.4253 205.083 37.4253C113.96 37.4253 40.0895 111.294 40.0895 202.418C40.0895 293.541 113.96 367.411 205.084 367.411C227.413 367.411 248.701 362.967 268.126 354.928C280.091 349.976 291.347 343.658 301.699 336.166ZM467.229 460.716C473.507 454.439 473.507 444.26 467.229 437.982L360.595 331.348C356.601 336.153 352.378 340.794 347.919 345.253C341.671 351.502 335.068 357.286 328.147 362.615L435.371 469.839C438.511 472.977 442.624 474.547 446.739 474.547C450.853 474.547 454.967 472.978 458.106 469.839L467.229 460.716ZM223.582 183.91H281.071C291.292 183.91 299.574 192.194 299.575 202.414C299.575 206.778 298.062 210.786 295.533 213.951C292.143 218.195 286.926 220.916 281.072 220.916H228.303H223.583V225.63V278.406C223.583 287.081 217.613 294.358 209.559 296.361C208.124 296.717 206.625 296.909 205.08 296.909C194.861 296.909 186.577 288.625 186.577 278.406V220.917H129.087C118.868 220.917 110.584 212.633 110.584 202.414C110.584 192.195 118.868 183.911 129.087 183.911H186.576V126.421C186.576 116.202 194.86 107.918 205.079 107.918C215.298 107.918 223.582 116.202 223.582 126.421V183.91Z"
+          />
+        </svg>
+      </div>
+    
+    </div>
+  
+        {%- endif -%}
+    {% endfor %}
+    {%- endif -%}
+    
           </div>
         </div>
         
@@ -2102,16 +2118,17 @@
       </div>
     </gp-carousel>
   
-        {%- endif -%}
-          <div type="grid-gallery"
-    class="grid-gallery h-fit w-full flex-wrap tablet:flex-wrap mobile:flex-wrap"
-    style="--d:flex;--d-mobile:flex;--d-tablet:flex;--fd:row;--fd-tablet:row;--fd-mobile:row;--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--gg:5px;--gg-tablet:5px;--gg-mobile:5px;--ai:flex-start;--ai-tablet:flex-start;--ai-mobile:flex-start;--mt:var(--g-s-s);--mt-mobile:var(--g-s-s)"
+  
+            
+  <div type="grid-gallery"
+    class="grid-gallery flex h-fit w-full flex-wrap scrollbar-track:rounded-2xl scrollbar-thumb:rounded-2xl scrollbar-thumb:bg-gray-400 !flex-nowrap mobile:!flex-nowrap tablet:!flex-nowrap"
+    style="--d:flex;--d-mobile:flex;--d-tablet:flex;--gg:5px;--gg-tablet:5px;--gg-mobile:5px"
   > 
-{%- if product.images.size > 1 -%}
-  {%- for image in product.images -%}
-    {%- if featured_image != null and image.id == featured_image.id -%}
-    <div aria-hidden id="{{image.id}}" class="image-item outline p-[1px] group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
-    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);--h: fit-content;--h-tablet: fit-content;--h-mobile: fit-content;--minh: fit-content;--minh-tablet: fit-content;--minh-mobile: fit-content;max-width: 100%;outline-color: var(--g-c-brand, brand);"
+    {%- if product.images.size > 1 -%}
+    {%- for image in product.images -%}
+      {%- if featured_image != null and image.id == featured_image.id -%}
+      <div aria-hidden id="{{image.id}}" data-outline="active" class="image-item p-[1px] data-[outline=active]:outline group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
+    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);outline-color: var(--g-c-brand, brand);max-width: 100%;"
     >
   
     <img
@@ -2142,9 +2159,9 @@
     </svg>
   </div>
   </div>
-    {% else %}
-    <div aria-hidden id="{{image.id}}" class="image-item undefined group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
-    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);--h: fit-content;--h-tablet: fit-content;--h-mobile: fit-content;--minh: fit-content;--minh-tablet: fit-content;--minh-mobile: fit-content;max-width: 100%;"
+      {% else %}
+      <div aria-hidden id="{{image.id}}" data-outline="deactive" class="image-item undefined data-[outline=active]:outline group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
+    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);outline-color: var(--g-c-brand, brand);max-width: 100%;"
     >
   
     <img
@@ -2175,11 +2192,12 @@
     </svg>
   </div>
   </div>
+      {%- endif -%}
+    {% endfor %}
     {%- endif -%}
-  {% endfor %}
-  {%- endif -%}
   </div>
-        </div>
+          </div>
+        {%- endif -%}
       </div>
   </gp-product-images>
   
@@ -2202,6 +2220,7 @@
         style="--tt:default"
       >
       <h2
+        data-gp-text
         class=""
         style="--ta:left;--line-clamp:1;--c:#242424;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -2239,6 +2258,7 @@
         style="--tdt:1"
       >
       <div
+        data-gp-text
         class="gp-price decoration-g-text-1"
         style="--tdc:text-1;--ta:left;--c:#424242;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -2271,6 +2291,7 @@
         style="--tdt:1"
       >
       <div
+        data-gp-text
         class="gp-price line-through g-paragraph-1"
         style="--tdc:#B4B4B4;--ta:left;--c:#B4B4B4"
       >
@@ -2472,6 +2493,7 @@
         style="--tt:default;--mb:var(--g-s-s);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
       >
       <div
+        data-gp-text
         class="gp-text"
         style="--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#242424;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -2630,6 +2652,7 @@
         style="--tt:default;--mb:var(--g-s-2xl);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
       >
       <div
+        data-gp-text
         class="g-paragraph-1 gp-text"
         style="--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#424242"
       >
@@ -2713,25 +2736,25 @@
   {%- endif -%}
   <gp-product-images gp-data='{"id":"grpT9OCmKf", "setting":{"featureImageVisible":{"desktop":true,"mobile":true,"tablet":true},"hoverEffect":"none","zoomType":"default","zoom":1.5,"otherImage":0,"clickEffect":"none","galleryVisible":{"desktop":false,"mobile":false,"tablet":false},"type":{"desktop":"images","mobile":"images","tablet":"images"},"largeViewInPopup":{"desktop":false,"mobile":false,"tablet":false},"slidesToShow":{"desktop":5,"tablet":5,"mobile":3},"numberPerRow":{"desktop":5,"tablet":5,"mobile":3},"showActiveStatus":true,"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"loop":{"desktop":true,"mobile":true,"tablet":true},"pauseOnHover":true,"speed":1,"arrowIcon":"","dragToScroll":true}, "styles":{"ftAspectRatio":{"desktop":"1","mobile":"1","tablet":"1"},"ftAspectWidth":{"desktop":0,"mobile":0,"tablet":0},"ftAspectHeight":{"desktop":0,"mobile":0,"tablet":0},"ftLayout":{"desktop":"cover","mobile":"cover","tablet":"cover"},"ftFullWidth":{"desktop":false,"mobile":false,"tablet":false},"ftWidth":{"desktop":"80px","mobile":"80px","tablet":"80px"},"ftAlign":{"desktop":"center","mobile":"center","tablet":"center"},"aspectRatio":{"desktop":"1","mobile":"1","tablet":"1"},"aspectWidth":{"desktop":0,"mobile":0,"tablet":0},"aspectHeight":{"desktop":0,"mobile":0,"tablet":0},"layout":{"desktop":"cover","mobile":"cover","tablet":"cover"},"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"300px","mobile":"300px","tablet":"300px"},"align":{"desktop":"flex-start","mobile":"flex-start","tablet":"flex-start"},"position":{"desktop":"bottom-left"},"gallerySpacing":{"desktop":"var(--g-s-s)","mobile":"var(--g-s-s)"},"spacing":{"desktop":"var(--g-s-s)","mobile":"var(--g-s-s)"},"verticalLayout":{"desktop":false,"mobile":false,"tablet":false},"verticalLayoutRow":{"desktop":true,"mobile":true,"tablet":true},"dotColor":{"desktop":"bg-1"},"dotActiveColor":{"desktop":"highlight"}}, "product":{{product | json | escape}}}'>
     <div
-        class="flex w-full  mobile:overflow-visible flex-col tablet:flex-col mobile:flex-col"
+        class="flex w-full flex-col tablet:flex-col mobile:flex-col"
         style="--jc:start;--jc-tablet:start;--jc-mobile:start"
       >
         <div
-    class="featured-image-root"
-    style="--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--d:flex;--d-mobile:flex;--d-tablet:flex;--w:80px;--w-tablet:80px;--w-mobile:80px;--maxw:80px;--maxw-tablet:80px;--maxw-mobile:80px"
+  class="featured-image-root gp-product-images-ft flex"
+  style="--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--d:flex;--d-mobile:flex;--d-tablet:flex;--w:80px;--w-tablet:80px;--w-mobile:80px;--maxw:80px;--maxw-tablet:80px;--maxw-mobile:80px"
+>
+  <div role="presentation" 
+    class="featured-image-wrapper relative flex w-full overflow-hidden"
+    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1"
   >
-    <div role="presentation" 
-      class="featured-image-wrapper relative flex w-full overflow-hidden"
-      style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1"
-    >
-    <div class="flex w-full justify-center">
-    <div class="featured-image group relative w-full">
-      <img
+  <div class="flex w-full items-start justify-center">
+  <div class="featured-image group relative w-full overflow-hidden">
+    <img
     id="{%- if featured_image != null -%}
             {{featured_image.id}}
             {%- endif -%}"
     draggable="false"
-    class="w-full featured-image-only transition-opacity gp_lazyload"
+    class="w-full featured-image-only w-full transition-opacity gp_lazyload"
     data-src="{%- if featured_image != null -%}
               {{featured_image.src | img_url: '1024x1024'}}
             {%- else -%}
@@ -2758,80 +2781,40 @@
     sizes="100vw"
     style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%"
   />
-      
-      
-    </div>
-    </div>
-    </div>
+    
+    
+  </div>
+  </div>
+  </div>
 </div>
-        <div
-          class="gallery-wrapper h-fit max-w-full overflow-auto justify-start tablet:justify-start mobile:justify-start"
-          style="--fs:1.23;--d:none;--d-mobile:none;--d-tablet:none;--w:100%;--w-tablet:100%;--w-mobile:100%;--maxw:100%;--maxw-tablet:100%;--maxw-mobile:100%"
-        >
         {%- if product.images.size > 1 -%}
-          
+          <div
+            class="gallery-wrapper gp-product-images-gallery inline-flex h-fit max-w-full justify-start tablet:justify-start mobile:justify-start"
+            style="--fs:1.23;--d:none;--d-mobile:none;--d-tablet:none;--w:300px;--w-tablet:300px;--w-mobile:300px;--maxw:300px;--maxw-tablet:300px;--maxw-mobile:300px;--mt:var(--g-s-s);--mt-mobile:var(--g-s-s);--mt-tablet:var(--g-s-s)"
+          >
+            
   <script src="https://d3kbi0je7pp4lw.cloudfront.net/assets/gp-carousel.js" defer="defer"></script>
-    <gp-carousel type="grid-carousel" id="gp-root-carousel-grpT9OCmKf-{{product.id}}" class="flex-1 w-full carousel-galley"  gp-data='{"id":"grpT9OCmKf-{{product.id}}","setting":{"loop":{"desktop":true,"mobile":true,"tablet":true},"slidesToShow":{"desktop":5,"tablet":5,"mobile":3},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"enableDrag":true,"vertical":{"desktop":false,"mobile":false,"tablet":false},"dotActiveColor":{"desktop":"highlight"},"dotColor":{"desktop":"bg-1"},"arrowCustom":""},"styles":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"100%","tablet":"100%","mobile":"100%"},"spacing":{"desktop":5,"tablet":5,"mobile":5},"adaptiveHeight":{"desktop":true,"mobile":true,"tablet":true}}}' style="--d:none;--d-mobile:none;--d-tablet:none">
+    <gp-carousel type="grid-carousel" id="gp-root-carousel-grpT9OCmKf-{{product.id}}" class="flex-1 w-full carousel-galley"  gp-data='{"id":"grpT9OCmKf-{{product.id}}","setting":{"loop":{"desktop":true,"mobile":true,"tablet":true},"slidesToShow":{"desktop":5,"mobile":3,"tablet":5},"dot":{"desktop":true,"mobile":true,"tablet":true},"arrow":{"desktop":true,"mobile":true,"tablet":true},"controlOverContent":{"desktop":true,"mobile":true,"tablet":true},"enableDrag":true,"vertical":{"desktop":false,"mobile":false,"tablet":false},"dotActiveColor":{"desktop":"highlight"},"dotColor":{"desktop":"bg-1"},"arrowCustom":""},"styles":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"100%","tablet":"100%","mobile":"100%"},"spacing":{"desktop":5,"tablet":5,"mobile":5},"adaptiveHeight":{"desktop":true,"mobile":true,"tablet":true}},"isHiddenArrowWhenDisabled":true}' style="--d:none;--d-mobile:none;--d-tablet:none">
       <div class="hidden aspect-square w-[12px] rounded-full shadow-md"></div>
       <div
         
-        class="relative gp-carousel-wrapper"
-        style="--mt:var(--g-s-s);--mt-mobile:var(--g-s-s);--h:auto;--h-tablet:auto;--h-mobile:auto;--w:100%;--w-tablet:100%;--w-mobile:100%"
+        class="relative gp-carousel-wrapper mobile:!block tablet:!block !block"
+        style="--h:auto;--h-tablet:auto;--h-mobile:auto;--w:100%;--w-tablet:100%;--w-mobile:100%;visibility:hidden"
       >
         <div
           class="h-full"
         >
           <div id="gp-carousel-grpT9OCmKf-{{product.id}}" class="gem-slider h-full overflow-hidden">
             
-      {%- if product.images.size > 1 -%}
-      {%- for image in product.images -%}
-          {%- if featured_image != null and image.id == featured_image.id -%}
-            
+    {%- if product.images.size > 1 -%}
+    {%- for image in product.images -%}
+        {%- if featured_image != null and image.id == featured_image.id -%}
+          
     <div
-      
+      data-outline="active"
       id="{{image.id}}"
-      style=""
-      class="gem-slider-item w-full gem-slider-item-grpT9OCmKf-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item outline p-[1px]"
-    >
-      
-      <img
-    
-    draggable="false"
-    class="gp_lazyload"
-    data-src="{{image.src | product_img_url: '1024x1024'}}" data-srcset="{{image.src | product_img_url: '1024x1024'}} 768w,{{image.src | product_img_url: '1024x1024'}} 1024w,{{image.src | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{image.width}}" height="{{image.height}}" alt="{{image.alt}}" priority
-    sizes="100vw"
-    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%;--w-tablet:100%;--w-mobile:100%"
-  />
-
-      <div class="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/50 opacity-0 transition-opacity duration-100 group-hover:opacity-100" 
-      style="--d: none;--d-mobile: none;--d-tablet: none;outline-color: var(--g-c-brand, brand);" 
-      >
-        <svg
-          height="100%"
-          width="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          viewBox="0 0 512 512"
-          color="#fff"
-        >
-          <path
-            fill="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M62.2467 345.253C43.7072 326.714 29.1474 305.116 18.9714 281.057C8.42839 256.13 3.08301 229.671 3.08301 202.418C3.08301 175.165 8.43012 148.707 18.974 123.78C29.15 99.7213 43.7098 78.123 62.2485 59.5834C80.788 41.0439 102.386 26.4841 126.445 16.3081C151.372 5.76422 177.831 0.417969 205.084 0.417969C232.337 0.417969 258.794 5.76421 283.722 16.3064C307.78 26.4823 329.379 41.0422 347.918 59.5817C366.458 78.1212 381.017 99.7196 391.194 123.778C401.737 148.706 407.083 175.163 407.083 202.417C407.083 229.671 401.737 256.129 391.194 281.056C388.406 287.648 385.277 294.048 381.839 300.257L493.397 411.815C514.091 432.511 514.091 466.187 493.395 486.883L484.272 496.006C474.245 506.032 460.915 511.553 446.738 511.553C432.559 511.553 419.228 506.032 409.202 496.006L296.022 382.824C291.996 384.854 287.898 386.762 283.721 388.528C258.794 399.073 232.336 404.419 205.082 404.419C177.828 404.419 151.371 399.071 126.443 388.528C102.385 378.352 80.7863 363.793 62.2467 345.253ZM301.699 336.166C313.928 327.317 324.896 316.835 334.282 305.034C342.149 295.142 348.9 284.325 354.355 272.775C364.433 251.432 370.076 227.586 370.076 202.419C370.076 111.296 296.206 37.4253 205.083 37.4253C113.96 37.4253 40.0895 111.294 40.0895 202.418C40.0895 293.541 113.96 367.411 205.084 367.411C227.413 367.411 248.701 362.967 268.126 354.928C280.091 349.976 291.347 343.658 301.699 336.166ZM467.229 460.716C473.507 454.439 473.507 444.26 467.229 437.982L360.595 331.348C356.601 336.153 352.378 340.794 347.919 345.253C341.671 351.502 335.068 357.286 328.147 362.615L435.371 469.839C438.511 472.977 442.624 474.547 446.739 474.547C450.853 474.547 454.967 472.978 458.106 469.839L467.229 460.716ZM223.582 183.91H281.071C291.292 183.91 299.574 192.194 299.575 202.414C299.575 206.778 298.062 210.786 295.533 213.951C292.143 218.195 286.926 220.916 281.072 220.916H228.303H223.583V225.63V278.406C223.583 287.081 217.613 294.358 209.559 296.361C208.124 296.717 206.625 296.909 205.08 296.909C194.861 296.909 186.577 288.625 186.577 278.406V220.917H129.087C118.868 220.917 110.584 212.633 110.584 202.414C110.584 192.195 118.868 183.911 129.087 183.911H186.576V126.421C186.576 116.202 194.86 107.918 205.079 107.918C215.298 107.918 223.582 116.202 223.582 126.421V183.91Z"
-          />
-        </svg>
-      </div>
-    
-    </div>
-  
-            {% else %}
-            
-    <div
-      
-      id="{{image.id}}"
-      style=""
-      class="gem-slider-item w-full gem-slider-item-grpT9OCmKf-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item undefined"
+      style="outline-color:var(--g-c-brand, brand)"
+      class="gem-slider-item w-full gem-slider-item-grpT9OCmKf-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item data-[outline=active]:outline p-[1px]"
     >
       
       <img
@@ -2865,10 +2848,50 @@
     
     </div>
   
-          {%- endif -%}
-      {% endfor %}
-      {%- endif -%}
+          {% else %}
+          
+    <div
+      data-outline="deactive"
+      id="{{image.id}}"
+      style="outline-color:var(--g-c-brand, brand)"
+      class="gem-slider-item w-full gem-slider-item-grpT9OCmKf-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 image-item data-[outline=active]:outline undefined"
+    >
       
+      <img
+    
+    draggable="false"
+    class="gp_lazyload"
+    data-src="{{image.src | product_img_url: '1024x1024'}}" data-srcset="{{image.src | product_img_url: '1024x1024'}} 768w,{{image.src | product_img_url: '1024x1024'}} 1024w,{{image.src | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{image.width}}" height="{{image.height}}" alt="{{image.alt}}" priority
+    sizes="100vw"
+    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:1;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--w:100%;--w-tablet:100%;--w-mobile:100%"
+  />
+
+      <div class="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/50 opacity-0 transition-opacity duration-100 group-hover:opacity-100" 
+      style="--d: none;--d-mobile: none;--d-tablet: none;" 
+      >
+        <svg
+          height="100%"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          viewBox="0 0 512 512"
+          color="#fff"
+        >
+          <path
+            fill="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M62.2467 345.253C43.7072 326.714 29.1474 305.116 18.9714 281.057C8.42839 256.13 3.08301 229.671 3.08301 202.418C3.08301 175.165 8.43012 148.707 18.974 123.78C29.15 99.7213 43.7098 78.123 62.2485 59.5834C80.788 41.0439 102.386 26.4841 126.445 16.3081C151.372 5.76422 177.831 0.417969 205.084 0.417969C232.337 0.417969 258.794 5.76421 283.722 16.3064C307.78 26.4823 329.379 41.0422 347.918 59.5817C366.458 78.1212 381.017 99.7196 391.194 123.778C401.737 148.706 407.083 175.163 407.083 202.417C407.083 229.671 401.737 256.129 391.194 281.056C388.406 287.648 385.277 294.048 381.839 300.257L493.397 411.815C514.091 432.511 514.091 466.187 493.395 486.883L484.272 496.006C474.245 506.032 460.915 511.553 446.738 511.553C432.559 511.553 419.228 506.032 409.202 496.006L296.022 382.824C291.996 384.854 287.898 386.762 283.721 388.528C258.794 399.073 232.336 404.419 205.082 404.419C177.828 404.419 151.371 399.071 126.443 388.528C102.385 378.352 80.7863 363.793 62.2467 345.253ZM301.699 336.166C313.928 327.317 324.896 316.835 334.282 305.034C342.149 295.142 348.9 284.325 354.355 272.775C364.433 251.432 370.076 227.586 370.076 202.419C370.076 111.296 296.206 37.4253 205.083 37.4253C113.96 37.4253 40.0895 111.294 40.0895 202.418C40.0895 293.541 113.96 367.411 205.084 367.411C227.413 367.411 248.701 362.967 268.126 354.928C280.091 349.976 291.347 343.658 301.699 336.166ZM467.229 460.716C473.507 454.439 473.507 444.26 467.229 437.982L360.595 331.348C356.601 336.153 352.378 340.794 347.919 345.253C341.671 351.502 335.068 357.286 328.147 362.615L435.371 469.839C438.511 472.977 442.624 474.547 446.739 474.547C450.853 474.547 454.967 472.978 458.106 469.839L467.229 460.716ZM223.582 183.91H281.071C291.292 183.91 299.574 192.194 299.575 202.414C299.575 206.778 298.062 210.786 295.533 213.951C292.143 218.195 286.926 220.916 281.072 220.916H228.303H223.583V225.63V278.406C223.583 287.081 217.613 294.358 209.559 296.361C208.124 296.717 206.625 296.909 205.08 296.909C194.861 296.909 186.577 288.625 186.577 278.406V220.917H129.087C118.868 220.917 110.584 212.633 110.584 202.414C110.584 192.195 118.868 183.911 129.087 183.911H186.576V126.421C186.576 116.202 194.86 107.918 205.079 107.918C215.298 107.918 223.582 116.202 223.582 126.421V183.91Z"
+          />
+        </svg>
+      </div>
+    
+    </div>
+  
+        {%- endif -%}
+    {% endfor %}
+    {%- endif -%}
+    
           </div>
         </div>
         
@@ -2898,16 +2921,17 @@
       </div>
     </gp-carousel>
   
-        {%- endif -%}
-          <div type="grid-gallery"
-    class="grid-gallery h-fit w-full flex-wrap tablet:flex-wrap mobile:flex-wrap"
-    style="--d:flex;--d-mobile:flex;--d-tablet:flex;--fd:row;--fd-tablet:row;--fd-mobile:row;--jc:flex-start;--jc-tablet:flex-start;--jc-mobile:flex-start;--gg:5px;--gg-tablet:5px;--gg-mobile:5px;--ai:flex-start;--ai-tablet:flex-start;--ai-mobile:flex-start;--mt:var(--g-s-s);--mt-mobile:var(--g-s-s)"
+  
+            
+  <div type="grid-gallery"
+    class="grid-gallery flex h-fit w-full flex-wrap scrollbar-track:rounded-2xl scrollbar-thumb:rounded-2xl scrollbar-thumb:bg-gray-400 !flex-nowrap mobile:!flex-nowrap tablet:!flex-nowrap"
+    style="--d:flex;--d-mobile:flex;--d-tablet:flex;--gg:5px;--gg-tablet:5px;--gg-mobile:5px"
   > 
-{%- if product.images.size > 1 -%}
-  {%- for image in product.images -%}
-    {%- if featured_image != null and image.id == featured_image.id -%}
-    <div aria-hidden id="{{image.id}}" class="image-item outline p-[1px] group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
-    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);--h: fit-content;--h-tablet: fit-content;--h-mobile: fit-content;--minh: fit-content;--minh-tablet: fit-content;--minh-mobile: fit-content;max-width: 100%;outline-color: var(--g-c-brand, brand);"
+    {%- if product.images.size > 1 -%}
+    {%- for image in product.images -%}
+      {%- if featured_image != null and image.id == featured_image.id -%}
+      <div aria-hidden id="{{image.id}}" data-outline="active" class="image-item p-[1px] data-[outline=active]:outline group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
+    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);outline-color: var(--g-c-brand, brand);max-width: 100%;"
     >
   
     <img
@@ -2938,9 +2962,9 @@
     </svg>
   </div>
   </div>
-    {% else %}
-    <div aria-hidden id="{{image.id}}" class="image-item undefined group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
-    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);--h: fit-content;--h-tablet: fit-content;--h-mobile: fit-content;--minh: fit-content;--minh-tablet: fit-content;--minh-mobile: fit-content;max-width: 100%;"
+      {% else %}
+      <div aria-hidden id="{{image.id}}" data-outline="deactive" class="image-item undefined data-[outline=active]:outline group relative overflow-hidden outline-1 -outline-offset-1 cursor-pointer"
+    style="--aspect: 1;--aspect-tablet: 1;--aspect-mobile: 1;--w: calc(20% - 4px);--w-tablet: calc(20% - 4px);--w-mobile: calc(33.333333333333336% - 3.3333333333333335px);outline-color: var(--g-c-brand, brand);max-width: 100%;"
     >
   
     <img
@@ -2971,11 +2995,12 @@
     </svg>
   </div>
   </div>
+      {%- endif -%}
+    {% endfor %}
     {%- endif -%}
-  {% endfor %}
-  {%- endif -%}
   </div>
-        </div>
+          </div>
+        {%- endif -%}
       </div>
   </gp-product-images>
   
@@ -2998,6 +3023,7 @@
         style="--tt:default"
       >
       <h2
+        data-gp-text
         class=""
         style="--ta:left;--line-clamp:1;--c:#242424;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -3035,6 +3061,7 @@
         style="--tdt:1"
       >
       <div
+        data-gp-text
         class="gp-price decoration-g-text-1"
         style="--tdc:text-1;--ta:left;--c:#424242;--size:16px;--lh:150%;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--ls:0px;--size-tablet:16px;--lh-tablet:150%;--size-mobile:14px"
       >
@@ -3067,6 +3094,7 @@
         style="--tdt:1"
       >
       <div
+        data-gp-text
         class="gp-price line-through g-paragraph-1"
         style="--tdc:#B4B4B4;--ta:left;--c:#B4B4B4"
       >
