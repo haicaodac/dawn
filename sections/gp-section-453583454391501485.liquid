@@ -29,6 +29,7 @@
         style="--tt:default"
       >
       <h2
+        data-gp-text
         class="text-g-text-2 g-heading-1 gp-text"
         style="--ts:none;--ta:left;--c:var(--g-c-text-2, text-2)"
       >
@@ -68,13 +69,13 @@
         endif
       else
         if 'latest' == 'latest'
-          assign latest_collection = collections | sort: 'updated_at' | reverse | first 
+          assign latest_collection = collections | sort: 'created_at' | first 
           paginate latest_collection.products by 6
-            assign products = latest_collection.products | sort: 'created_at' | reverse
+            assign products = latest_collection.products
           endpaginate
         else
           paginate target_collection.products by 6
-            assign products = target_collection.products | sort: 'created_at' | reverse
+            assign products = target_collection.products
           endpaginate
         endif
       endif
