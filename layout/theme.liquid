@@ -832,22 +832,7 @@
 
     {% render 'gp-head' %}
   </head>
-  <body class='template-{{ request.page_type | handle }}'>
-    <img
-      width='99999'
-      height='99999'
-      style='pointer-events:none;position:absolute;top:0;left:0;width:99vw;height:99vh;max-width:99vw;max-height:99vh'
-      src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+'
-    >
-    <a class='in-page-link visually-hidden skip-link' href='#MainContent'>
-      {{ 'general.accessibility.skip_to_content' | t }}
-    </a>
-    {%- if settings.enable_ajax -%}
-      {% include 'cart-popup' %}
-    {%- endif -%}
-    {% section 'header' %}
-    <div class='page-container drawer-page-content' id='PageContainer'>
-      <main class='main-content js-focus-hidden' id='MainContent' role='main' tabindex='-1'>
+  <body class='template-{{ request.page_type | handle }}'><main class='main-content js-focus-hidden' id='MainContent' role='main' tabindex='-1'>
         {%- if request.design_mode or template contains 'cart' or template contains 'checkout' -%}
           {{ content_for_layout }}
         {%- else -%}
