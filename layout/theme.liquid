@@ -263,6 +263,9 @@
       }
     </script>
   {% render 'gp-head' %}
+<!--Gem_Page_Header_Script-->
+{% render 'gem-app-header-scripts' %}
+<!--End_Gem_Page_Header_Script-->
 </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -320,5 +323,8 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  </body>
+  <!--Gem_Page_Footer_Script-->
+{% render 'gem-app-footer-scripts', GEM_FOOTER_SCRIPT: GEM_FOOTER_SCRIPT %}
+<!--End_Gem_Page_Footer_Script-->
+</body>
 </html>
