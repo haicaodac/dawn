@@ -1,66 +1,12 @@
 {
   "sections": {
-    "gp_section_467229347007169406": {
-      "type": "gp-section-467229347007169406",
-      "settings": {
-      }
-    },
     "gp_section_467229347091055486": {
       "type": "gp-section-467229347091055486",
-      "settings": {
-      }
-    },
-    "gp_section_467229347107832702": {
-      "type": "gp-section-467229347107832702",
-      "settings": {
-      }
-    },
-    "gp_section_467229347342713726": {
-      "type": "gp-section-467229347342713726",
-      "settings": {
-      }
-    },
-    "gp_section_467229347325936510": {
-      "type": "gp-section-467229347325936510",
-      "settings": {
-      }
-    },
-    "gp_section_467229347644703614": {
-      "type": "gp-section-467229347644703614",
-      "settings": {
-      }
-    },
-    "gp_section_467229347661480830": {
-      "type": "gp-section-467229347661480830",
-      "settings": {
-      }
-    },
-    "gp_section_467229347426599806": {
-      "type": "gp-section-467229347426599806",
-      "settings": {
-      }
-    },
-    "gp_section_467229347359490942": {
-      "type": "gp-section-467229347359490942",
-      "settings": {
-      }
-    },
-    "gp_section_467229347443377022": {
-      "type": "gp-section-467229347443377022",
       "settings": {
       }
     }
   },
   "order": [
-    "gp_section_467229347007169406",
-    "gp_section_467229347091055486",
-    "gp_section_467229347107832702",
-    "gp_section_467229347342713726",
-    "gp_section_467229347325936510",
-    "gp_section_467229347644703614",
-    "gp_section_467229347661480830",
-    "gp_section_467229347426599806",
-    "gp_section_467229347359490942",
-    "gp_section_467229347443377022"
+    "gp_section_467229347091055486"
   ]
 }
