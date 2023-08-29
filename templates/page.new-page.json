@@ -182,6 +182,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "2cf6a374-9085-42c0-b147-85cce95ef4bc": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
         }
       },
       "block_order": [
@@ -191,7 +197,8 @@
         "template--20836632363308__c6b1cc27-3da9-4f0e-8d7d-bb68915b1846-variant_picker-1",
         "template--20836632363308__c6b1cc27-3da9-4f0e-8d7d-bb68915b1846-quantity_selector-1",
         "template--20836632363308__c6b1cc27-3da9-4f0e-8d7d-bb68915b1846-buy_buttons-1",
-        "template--20836632363308__c6b1cc27-3da9-4f0e-8d7d-bb68915b1846-share-1"
+        "template--20836632363308__c6b1cc27-3da9-4f0e-8d7d-bb68915b1846-share-1",
+        "2cf6a374-9085-42c0-b147-85cce95ef4bc"
       ],
       "settings": {
         "product": "",
