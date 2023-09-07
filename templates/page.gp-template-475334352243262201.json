@@ -1,0 +1,109 @@
+{
+  "layout": "theme.gempages.blank",
+  "sections": {
+    "gp_section_476364900285809503": {
+      "type": "gp-section-476364900285809503",
+      "settings": {
+      }
+    },
+    "gp_section_475929331512640271": {
+      "type": "gp-section-475929331512640271",
+      "settings": {
+      }
+    },
+    "gp_section_476208660364657604": {
+      "type": "gp-section-476208660364657604",
+      "settings": {
+      }
+    },
+    "gp_section_475929331344868111": {
+      "type": "gp-section-475929331344868111",
+      "settings": {
+      }
+    },
+    "gp_section_475929331713966863": {
+      "type": "gp-section-475929331713966863",
+      "settings": {
+      }
+    },
+    "gp_section_475929331680412431": {
+      "type": "gp-section-475929331680412431",
+      "settings": {
+      }
+    },
+    "gp_section_475929331059720975": {
+      "type": "gp-section-475929331059720975",
+      "settings": {
+      }
+    },
+    "gp_section_475929331059655439": {
+      "type": "gp-section-475929331059655439",
+      "settings": {
+      }
+    },
+    "gp_section_475929331277759247": {
+      "type": "gp-section-475929331277759247",
+      "settings": {
+      }
+    },
+    "gp_section_475929553223549711": {
+      "type": "gp-section-475929553223549711",
+      "settings": {
+      }
+    },
+    "gp_section_475929553441653519": {
+      "type": "gp-section-475929553441653519",
+      "settings": {
+      }
+    },
+    "gp_section_475929553491985167": {
+      "type": "gp-section-475929553491985167",
+      "settings": {
+      }
+    },
+    "gp_section_475929553508762383": {
+      "type": "gp-section-475929553508762383",
+      "settings": {
+      }
+    },
+    "gp_section_475929553810817807": {
+      "type": "gp-section-475929553810817807",
+      "settings": {
+      }
+    },
+    "gp_section_475929553542316815": {
+      "type": "gp-section-475929553542316815",
+      "settings": {
+      }
+    },
+    "gp_section_475929553810752271": {
+      "type": "gp-section-475929553810752271",
+      "settings": {
+      }
+    },
+    "gp_section_477365010666881965": {
+      "type": "gp-section-477365010666881965",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "gp_section_476364900285809503",
+    "gp_section_475929331512640271",
+    "gp_section_476208660364657604",
+    "gp_section_475929331344868111",
+    "gp_section_475929331713966863",
+    "gp_section_475929331680412431",
+    "gp_section_475929331059720975",
+    "gp_section_475929331059655439",
+    "gp_section_475929331277759247",
+    "gp_section_475929553223549711",
+    "gp_section_475929553441653519",
+    "gp_section_475929553491985167",
+    "gp_section_475929553508762383",
+    "gp_section_475929553810817807",
+    "gp_section_475929553542316815",
+    "gp_section_475929553810752271",
+    "gp_section_477365010666881965"
+  ]
+}
