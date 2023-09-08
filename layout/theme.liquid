@@ -1,9 +1,10 @@
-{% for article in blog.articles %}
+1
+{% for article in articles %}
    <div class="swiper-slide">
       {{ article.title }}
    </div>
 {% endfor %}
-
+2
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>{% render 'pagefly-head' %}
