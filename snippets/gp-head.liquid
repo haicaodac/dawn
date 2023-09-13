@@ -9,7 +9,13 @@
         assign isV7GpTemplate = true
       endif
       assign gpShopMeta = shop.metafields.GEMPAGES
-      if gpShopMeta and gpShopMeta['product-default'] and request.page_type == 'product' or gpShopMeta and gpShopMeta['index-default'] and request.page_type == 'index' or gpShopMeta and gpShopMeta['collection-default'] and request.page_type == 'collection'
+      if gpShopMeta and gpShopMeta['product-default'] and request.page_type == 'product'
+        assign isV7GpTemplate = true
+      endif
+      if gpShopMeta and gpShopMeta['index-default'] and request.page_type == 'index'
+        assign isV7GpTemplate = true
+      endif
+       if gpShopMeta and gpShopMeta['collection-default'] and request.page_type == 'collection'
         assign isV7GpTemplate = true
       endif
       if isPreview
