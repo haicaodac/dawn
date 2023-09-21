@@ -1,12 +1,11 @@
 
     {%-liquid
       assign gpTemplateSuffix = template.suffix
-      assign arrGpSprintTemplate = gpTemplateSuffix | split: "-"
-      assign isGpSplitSuccess = arrGpSprintTemplate.size == 3
-      if gpTemplateSuffix contains "gem-" and gpTemplateSuffix contains "-template" and isGpSplitSuccess
+      assign arrySplitSuffix = gpTemplateSuffix | split: "-"
+      if gpTemplateSuffix contains "gem-" and gpTemplateSuffix contains "-template" and arrySplitSuffix.size == 3
         assign isV6GpTemplate = true
       endif
-      if gpTemplateSuffix contains "gp-template-" and isGpSplitSuccess
+      if gpTemplateSuffix contains "gp-template-" and arrySplitSuffix.size == 3
         assign isV7GpTemplate = true
       endif
       assign gpShopMeta = shop.metafields.GEMPAGES
