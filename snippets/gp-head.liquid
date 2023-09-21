@@ -1,7 +1,8 @@
 
     {%-liquid
       assign gpTemplateSuffix = template.suffix
-      assign isGpSplitSuccess = gpTemplateSuffix | split: "-" | size == 3
+      assign arrGpSprintTemplate = gpTemplateSuffix | split: "-"
+      assign isGpSplitSuccess = arrGpSprintTemplate.size == 3
       if gpTemplateSuffix contains "gem-" and gpTemplateSuffix contains "-template" and isGpSplitSuccess
         assign isV6GpTemplate = true
       endif
