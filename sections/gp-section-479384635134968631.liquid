@@ -1,0 +1,466 @@
+
+  
+  
+      <style>
+        @font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVQ.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVQ.woff) format('woff');
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+      </style>
+    
+  <style>
+    .gps-479384635134968631 .relative{position:relative}.gps-479384635134968631 .inset-0{inset:0}.gps-479384635134968631 .mx-auto{margin-left:auto;margin-right:auto}.gps-479384635134968631 .mb-0{margin-bottom:0}.gps-479384635134968631 .inline-block{display:inline-block}.gps-479384635134968631 .\!flex{display:flex!important}.gps-479384635134968631 .grid{display:grid}.gps-479384635134968631 .w-full{width:100%}.gps-479384635134968631 .max-w-full{max-width:100%}.gps-479384635134968631 .overflow-hidden{overflow:hidden}.gps-479384635134968631 .align-middle{vertical-align:middle}.gps-479384635134968631 .transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-479384635134968631 .transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-479384635134968631 .duration-200{transition-duration:.2s}.gps-479384635134968631 .duration-300{transition-duration:.3s}.gps-479384635134968631 .ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-479384635134968631 .\[\&_\*\]\:max-w-full *{max-width:100%}@media (hover:hover) and (pointer:fine){.gps-479384635134968631 .group\/image:hover .group-hover\/image\:bg-\[color\:var\(--hvr-bgc\2c _var\(--bgc\)\)\]{background-color:var(--hvr-bgc,var(--bgc))}.gps-479384635134968631 .group\/image:hover .group-hover\/image\:opacity-\[var\(--hvr-op\2c _var\(--op\)\)\]{opacity:var(--hvr-op,var(--op))}}.gps-479384635134968631 .anuso2{position:absolute}.gps-479384635134968631 .a6ottr{display:flex}.gps-479384635134968631 .a6czrn{flex-direction:column}.gps-479384635134968631 .asn7x0{flex-wrap:wrap}.gps-479384635134968631 .a55t39{align-items:center}
+  </style>
+  
+      
+      
+            <section class="mx-auto max-w-full" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:0px;--pl-tablet:0px;--pl-mobile:0px;--pr:0px;--pr-tablet:0px;--pr-mobile:0px">
+              
+    <div id="g85XN7qWmy" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--pt:0px;--pb:0px;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll" class="g85XN7qWmy mx-auto mb-0 grid max-w-full transition-colors duration-200 ease-in-out [&amp;_*]:max-w-full">
+    <div label="Block" tag="Col" type="component" style="--jc:start" class="gL-ZwxaTCN relative a6ottr a6czrn">
+      
+      
+      
+    <div parenttag="Col" id="gWAyTJbCs_" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pt:var(--g-s-4xl);--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:#242424;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll" class="gWAyTJbCs_ mx-auto mb-0 grid max-w-full transition-colors duration-200 ease-in-out [&amp;_*]:max-w-full">
+    <div label="Block" tag="Col" type="component" style="--jc:start" class="gJAcIc02yc relative a6ottr a6czrn">
+      
+      
+      
+    <div parenttag="Col" id="gOU7gVstjf" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-2xl);--pl:15px;--pr:15px;--cg:30px;--pc:start;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll" class="gOU7gVstjf mx-auto mb-0 grid max-w-full transition-colors duration-200 ease-in-out [&amp;_*]:max-w-full">
+    <div label="Block" tag="Col" type="component" style="--jc:start" class="gvjsxjUK8a relative a6ottr a6czrn">
+      <div role="presentation" class="group/image overflow-hidden gt6TJx9FQD" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-xl);--ta:left">
+    <div>
+      <figure class="relative inline-block overflow-hidden align-middle" style="--shadow:none;--radius:var(--g-radius-none)">
+        <img quality="70" title="Image Title" draggable="false" class="inline-block w-full max-w-full a6ottr gp_lazyload" data-src="https://ucarecdn.com/943abcb0-8261-46a2-9b55-f84095cc6419/-/format/auto/" data-srcset="https://ucarecdn.com/943abcb0-8261-46a2-9b55-f84095cc6419/-/format/auto/ 768w,https://ucarecdn.com/943abcb0-8261-46a2-9b55-f84095cc6419/-/format/auto/ 1024w,https://ucarecdn.com/943abcb0-8261-46a2-9b55-f84095cc6419/-/format/auto/ 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="199" height="27" alt="Alt Image" priority="" sizes="100vw" style="--aspect:initial;--aspect-tablet:initial;--aspect-mobile:initial;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%">
+        <div class="anuso2 inset-0 transition-all duration-300 group-hover/image:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/image:opacity-[var(--hvr-op,_var(--op))]" style="--bgc:#242424;--op:0">
+      </div></figure>
+    </div>
+  </div>
+    <div parenttag="Col" class="gFetGLntdB  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-2xl);--pr:100px;--mb-mobile:var(--g-s-2xl);--pr-mobile:0px">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:400;--ls:0px;--lh:150%;--size:16px;--size-tablet:16px;--size-mobile:14px;--c:#FFFFFF;word-break:break-word">
+      <p>We meticulously source active clean ingredients that nourish the skin while enhancing one’s natural beauty. Think of our products as effortless solutions to make your day easier.</p>
+      </div>
+    </div>
+    
+      
+      
+    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:var(--g-s-3xl);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+        
+    <ul class="a6ottr asn7x0" style="--cg:16px;--jc:left">
+            <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none)" class="gQmAzJFxf4 ">
+      
+    <div class="a6ottr w-full a6czrn a55t39">
+    <div role="presentation" class="group/image overflow-hidden gvcMsePgAN" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--ta:left">
+    <div>
+      <figure class="relative inline-block overflow-hidden align-middle" style="--shadow:none;--radius:var(--g-radius-none)">
+        <img quality="70" title="Image Title" draggable="false" class="inline-block w-full max-w-full a6ottr gp_lazyload" data-src="https://ucarecdn.com/c6af312c-9047-4238-99cf-4b3852108290/-/format/auto/" data-srcset="https://ucarecdn.com/c6af312c-9047-4238-99cf-4b3852108290/-/format/auto/ 768w,https://ucarecdn.com/c6af312c-9047-4238-99cf-4b3852108290/-/format/auto/ 1024w,https://ucarecdn.com/c6af312c-9047-4238-99cf-4b3852108290/-/format/auto/ 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="36" height="37" alt="Alt Image" priority="" sizes="100vw" style="--aspect:initial;--aspect-tablet:initial;--aspect-mobile:initial;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%">
+        <div class="anuso2 inset-0 transition-all duration-300 group-hover/image:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/image:opacity-[var(--hvr-op,_var(--op))]" style="--bgc:#242424;--op:0">
+      </div></figure>
+    </div>
+  </div>
+    </div>
+  
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none)" class="gxKiYBtgdM ">
+      
+    <div class="a6ottr w-full a6czrn a55t39">
+    <div role="presentation" class="group/image overflow-hidden gU2kjyWQtC" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--ta:left">
+    <div>
+      <figure class="relative inline-block overflow-hidden align-middle" style="--shadow:none;--radius:var(--g-radius-none)">
+        <img quality="70" title="Image Title" draggable="false" class="inline-block w-full max-w-full a6ottr gp_lazyload" data-src="https://ucarecdn.com/65d9a14b-c1dc-4ed7-aa27-2ba5207cf931/-/format/auto/" data-srcset="https://ucarecdn.com/65d9a14b-c1dc-4ed7-aa27-2ba5207cf931/-/format/auto/ 768w,https://ucarecdn.com/65d9a14b-c1dc-4ed7-aa27-2ba5207cf931/-/format/auto/ 1024w,https://ucarecdn.com/65d9a14b-c1dc-4ed7-aa27-2ba5207cf931/-/format/auto/ 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="36" height="37" alt="Alt Image" priority="" sizes="100vw" style="--aspect:initial;--aspect-tablet:initial;--aspect-mobile:initial;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%">
+        <div class="anuso2 inset-0 transition-all duration-300 group-hover/image:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/image:opacity-[var(--hvr-op,_var(--op))]" style="--bgc:#242424;--op:0">
+      </div></figure>
+    </div>
+  </div>
+    </div>
+  
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none)" class="gahVAZaUBV ">
+      
+    <div class="a6ottr w-full a6czrn a55t39">
+    <div role="presentation" class="group/image overflow-hidden gSQCjNXXD4" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--ta:left">
+    <div>
+      <figure class="relative inline-block overflow-hidden align-middle" style="--shadow:none;--radius:var(--g-radius-none)">
+        <img quality="70" title="Image Title" draggable="false" class="inline-block w-full max-w-full a6ottr gp_lazyload" data-src="https://ucarecdn.com/a79fc876-74c7-42d8-9483-4c7dc7eff28d/-/format/auto/" data-srcset="https://ucarecdn.com/a79fc876-74c7-42d8-9483-4c7dc7eff28d/-/format/auto/ 768w,https://ucarecdn.com/a79fc876-74c7-42d8-9483-4c7dc7eff28d/-/format/auto/ 1024w,https://ucarecdn.com/a79fc876-74c7-42d8-9483-4c7dc7eff28d/-/format/auto/ 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="36" height="37" alt="Alt Image" priority="" sizes="100vw" style="--aspect:initial;--aspect-tablet:initial;--aspect-mobile:initial;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%">
+        <div class="anuso2 inset-0 transition-all duration-300 group-hover/image:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/image:opacity-[var(--hvr-op,_var(--op))]" style="--bgc:#242424;--op:0">
+      </div></figure>
+    </div>
+  </div>
+    </div>
+  
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none)" class="gNeTW_SNok ">
+      
+    <div class="a6ottr w-full a6czrn a55t39">
+    <div role="presentation" class="group/image overflow-hidden gggtHlSK7j" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--ta:left">
+    <div>
+      <figure class="relative inline-block overflow-hidden align-middle" style="--shadow:none;--radius:var(--g-radius-none)">
+        <img quality="70" title="Image Title" draggable="false" class="inline-block w-full max-w-full a6ottr gp_lazyload" data-src="https://ucarecdn.com/93ad7c49-7a1e-4227-86e2-9c0a90d11881/-/format/auto/" data-srcset="https://ucarecdn.com/93ad7c49-7a1e-4227-86e2-9c0a90d11881/-/format/auto/ 768w,https://ucarecdn.com/93ad7c49-7a1e-4227-86e2-9c0a90d11881/-/format/auto/ 1024w,https://ucarecdn.com/93ad7c49-7a1e-4227-86e2-9c0a90d11881/-/format/auto/ 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="36" height="37" alt="Alt Image" priority="" sizes="100vw" style="--aspect:initial;--aspect-tablet:initial;--aspect-mobile:initial;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%">
+        <div class="anuso2 inset-0 transition-all duration-300 group-hover/image:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/image:opacity-[var(--hvr-op,_var(--op))]" style="--bgc:#242424;--op:0">
+      </div></figure>
+    </div>
+  </div>
+    </div>
+  
+      </div>
+         </ul>
+    </div>
+  
+    </div><div label="Block" tag="Col" type="component" style="--jc:start" class="gVEmN7iKP2 relative a6ottr a6czrn">
+      
+      
+      
+    <div parenttag="Col" id="gjzyhppVAl" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:0px;--cg:30px;--pc:start;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll" class="gjzyhppVAl mx-auto mb-0 grid max-w-full transition-colors duration-200 ease-in-out [&amp;_*]:max-w-full">
+    <div label="Block" tag="Col" type="component" style="--jc:start" class="gDcpoRuYzC relative a6ottr a6czrn">
+      
+    <div parenttag="Col" class="gOQSEOmWjH  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-xl)">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:600;--ls:0px;--lh:130%;--size:19px;--size-tablet:19px;--size-mobile:17px;--c:#FFFFFF;word-break:break-word">
+      <p>Support</p>
+      </div>
+    </div>
+    <div parenttag="Col" class="ghR4EoImB3  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l)">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:400;--ls:0px;--lh:150%;--size:16px;--size-tablet:16px;--size-mobile:14px;--c:#FFFFFF;word-break:break-word">
+      <p>FAQs</p>
+      </div>
+    </div>
+    <div parenttag="Col" class="goFZNJOifs  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l)">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:400;--ls:0px;--lh:150%;--size:16px;--size-tablet:16px;--size-mobile:14px;--c:#FFFFFF;word-break:break-word">
+      <p>Blog</p>
+      </div>
+    </div>
+    <div parenttag="Col" class="g3T5Xemy-o  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l)">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:400;--ls:0px;--lh:150%;--size:16px;--size-tablet:16px;--size-mobile:14px;--c:#FFFFFF;word-break:break-word">
+      <p>Privacy Policy</p>
+      </div>
+    </div>
+    <div parenttag="Col" class="gvJX0KCOCM  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:var(--g-s-3xl)">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:400;--ls:0px;--lh:150%;--size:16px;--size-tablet:16px;--size-mobile:14px;--c:#FFFFFF;word-break:break-word">
+      <p>Terms of Service</p>
+      </div>
+    </div>
+    </div><div label="Block" tag="Col" type="component" style="--jc:start" class="gxyB7P5o_G relative a6ottr a6czrn">
+      
+    <div parenttag="Col" class="gYCbUEtNVG  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-xl)">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:600;--ls:0px;--lh:130%;--size:19px;--size-tablet:19px;--size-mobile:17px;--c:#FFFFFF;word-break:break-word">
+      <p>Get In Touch</p>
+      </div>
+    </div>
+    <div parenttag="Col" class="g0-3JBwOtf  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-xl);--mb-mobile:var(--g-s-l)">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:400;--ls:0px;--lh:150%;--size:16px;--size-tablet:16px;--size-mobile:14px;--c:#FFFFFF;word-break:break-word">
+      <p>4167 Park Boulevard, Osage, Iowa, United State</p>
+      </div>
+    </div>
+    <div parenttag="Col" class="gFn04JyYMG  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-xl);--mb-mobile:var(--g-s-l)">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:400;--ls:0px;--lh:150%;--size:16px;--size-tablet:16px;--size-mobile:14px;--c:#FFFFFF;word-break:break-word">
+      <p>+999-9999-999</p>
+      </div>
+    </div>
+    <div parenttag="Col" class="gV_2LLdTSk  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l)">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:400;--ls:0px;--lh:150%;--size:16px;--size-tablet:16px;--size-mobile:14px;--c:#FFFFFF;word-break:break-word">
+      <p>support@gmail.com</p>
+      </div>
+    </div>
+    </div>
+    </div>
+  
+    
+    </div>
+    </div>
+  
+    
+    </div>
+    </div>
+  
+    
+      
+      
+    <div parenttag="Col" id="gybK6RcKxg" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pt:var(--g-s-xl);--pl:0px;--pb:var(--g-s-s);--pr:0px;--mb-mobile:0px;--pt-mobile:var(--g-s-l);--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:#424242;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll" class="gybK6RcKxg mx-auto mb-0 grid max-w-full transition-colors duration-200 ease-in-out [&amp;_*]:max-w-full">
+    <div label="Block" tag="Col" type="component" style="--jc:start" class="g4C6SD134_ relative a6ottr a6czrn">
+      
+      
+      
+    <div parenttag="Col" id="gLuF8KQGj1" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--pl:15px;--pr:15px;--cg:32px;--pc:start;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll" class="gLuF8KQGj1 mx-auto mb-0 grid max-w-full transition-colors duration-200 ease-in-out [&amp;_*]:max-w-full">
+    <div label="Block" tag="Col" type="component" style="--jc:center" class="gUgRtl6r0A relative a6ottr a6czrn">
+      
+    <div parenttag="Col" class="gOYaqjiC0u  !flex" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:var(--g-s-xl)">
+      <div data-gp-text="" class="gp-text" style="--ta:left;--ta-mobile:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Open-Sans, Open Sans);--weight:400;--ls:0px;--lh:150%;--size:13px;--size-tablet:13px;--size-mobile:12px;--c:#FFFFFF;word-break:break-word">
+      <p>Copyright © 2022 GemThemes. All Rights Reserved.</p>
+      </div>
+    </div>
+    </div><div label="Block" tag="Col" type="component" style="--jc:center" class="gpgBTZ1zWB relative a6ottr a6czrn">
+      
+    
+      
+      
+    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+        
+    <ul class="a6ottr asn7x0" style="--cg:8px;--jc:right;--jc-mobile:center">
+            <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none)" class="gotmbsTjtU ">
+      
+    <div class="a6ottr w-full a6czrn a55t39">
+    <div role="presentation" class="group/image overflow-hidden gZOdnTJs81" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--ta:left">
+    <div>
+      <figure class="relative inline-block overflow-hidden align-middle" style="--shadow:none;--radius:var(--g-radius-none)">
+        <img quality="70" title="Image Title" draggable="false" class="inline-block w-full max-w-full a6ottr gp_lazyload" data-src="https://ucarecdn.com/cd3c049e-b0fd-46f0-9d7b-491e646da299/paypal.svg" data-srcset="https://ucarecdn.com/cd3c049e-b0fd-46f0-9d7b-491e646da299/paypal.svg 768w,https://ucarecdn.com/cd3c049e-b0fd-46f0-9d7b-491e646da299/paypal.svg 1024w,https://ucarecdn.com/cd3c049e-b0fd-46f0-9d7b-491e646da299/paypal.svg 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="40" height="24" alt="Alt Image" priority="" sizes="100vw" style="--aspect:initial;--aspect-tablet:initial;--aspect-mobile:initial;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%">
+        <div class="anuso2 inset-0 transition-all duration-300 group-hover/image:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/image:opacity-[var(--hvr-op,_var(--op))]" style="--bgc:#242424;--op:0">
+      </div></figure>
+    </div>
+  </div>
+    </div>
+  
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none)" class="gpPA_68Cgn ">
+      
+    <div class="a6ottr w-full a6czrn a55t39">
+    <div role="presentation" class="group/image overflow-hidden gNzEST7UuN" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--ta:left">
+    <div>
+      <figure class="relative inline-block overflow-hidden align-middle" style="--shadow:none;--radius:var(--g-radius-none)">
+        <img quality="70" title="Image Title" draggable="false" class="inline-block w-full max-w-full a6ottr gp_lazyload" data-src="https://ucarecdn.com/3e1e6a8e-ff8f-46fc-9c92-96a173e7b1a2/visa.svg" data-srcset="https://ucarecdn.com/3e1e6a8e-ff8f-46fc-9c92-96a173e7b1a2/visa.svg 768w,https://ucarecdn.com/3e1e6a8e-ff8f-46fc-9c92-96a173e7b1a2/visa.svg 1024w,https://ucarecdn.com/3e1e6a8e-ff8f-46fc-9c92-96a173e7b1a2/visa.svg 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="40" height="24" alt="Alt Image" priority="" sizes="100vw" style="--aspect:initial;--aspect-tablet:initial;--aspect-mobile:initial;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%">
+        <div class="anuso2 inset-0 transition-all duration-300 group-hover/image:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/image:opacity-[var(--hvr-op,_var(--op))]" style="--bgc:#242424;--op:0">
+      </div></figure>
+    </div>
+  </div>
+    </div>
+  
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none)" class="gqbPj3Alf5 ">
+      
+    <div class="a6ottr w-full a6czrn a55t39">
+    <div role="presentation" class="group/image overflow-hidden goWKqnZoLC" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--ta:left">
+    <div>
+      <figure class="relative inline-block overflow-hidden align-middle" style="--shadow:none;--radius:var(--g-radius-none)">
+        <img quality="70" title="Image Title" draggable="false" class="inline-block w-full max-w-full a6ottr gp_lazyload" data-src="https://ucarecdn.com/c22cba2e-61ec-41f1-aed1-14b23456d8f9/master.svg" data-srcset="https://ucarecdn.com/c22cba2e-61ec-41f1-aed1-14b23456d8f9/master.svg 768w,https://ucarecdn.com/c22cba2e-61ec-41f1-aed1-14b23456d8f9/master.svg 1024w,https://ucarecdn.com/c22cba2e-61ec-41f1-aed1-14b23456d8f9/master.svg 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="40" height="24" alt="Alt Image" priority="" sizes="100vw" style="--aspect:initial;--aspect-tablet:initial;--aspect-mobile:initial;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%">
+        <div class="anuso2 inset-0 transition-all duration-300 group-hover/image:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/image:opacity-[var(--hvr-op,_var(--op))]" style="--bgc:#242424;--op:0">
+      </div></figure>
+    </div>
+  </div>
+    </div>
+  
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none)" class="gwxffxcxRr ">
+      
+    <div class="a6ottr w-full a6czrn a55t39">
+    <div role="presentation" class="group/image overflow-hidden ghgQFTycRN" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--ta:left">
+    <div>
+      <figure class="relative inline-block overflow-hidden align-middle" style="--shadow:none;--radius:var(--g-radius-none)">
+        <img quality="70" title="Image Title" draggable="false" class="inline-block w-full max-w-full a6ottr gp_lazyload" data-src="https://ucarecdn.com/cce3633b-a596-4f9a-9df2-d238392d8d4f/applepay.svg" data-srcset="https://ucarecdn.com/cce3633b-a596-4f9a-9df2-d238392d8d4f/applepay.svg 768w,https://ucarecdn.com/cce3633b-a596-4f9a-9df2-d238392d8d4f/applepay.svg 1024w,https://ucarecdn.com/cce3633b-a596-4f9a-9df2-d238392d8d4f/applepay.svg 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="40" height="24" alt="Alt Image" priority="" sizes="100vw" style="--aspect:initial;--aspect-tablet:initial;--aspect-mobile:initial;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%">
+        <div class="anuso2 inset-0 transition-all duration-300 group-hover/image:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/image:opacity-[var(--hvr-op,_var(--op))]" style="--bgc:#242424;--op:0">
+      </div></figure>
+    </div>
+  </div>
+    </div>
+  
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none)" class="g5jwS9Wlap ">
+      
+    <div class="a6ottr w-full a6czrn a55t39">
+    <div role="presentation" class="group/image overflow-hidden gSfH0Af-SD" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--ta:left">
+    <div>
+      <figure class="relative inline-block overflow-hidden align-middle" style="--shadow:none;--radius:var(--g-radius-none)">
+        <img quality="70" title="Image Title" draggable="false" class="inline-block w-full max-w-full a6ottr gp_lazyload" data-src="https://ucarecdn.com/56545192-54e2-4bed-8b99-4d7ffc7d1048/gpay.svg" data-srcset="https://ucarecdn.com/56545192-54e2-4bed-8b99-4d7ffc7d1048/gpay.svg 768w,https://ucarecdn.com/56545192-54e2-4bed-8b99-4d7ffc7d1048/gpay.svg 1024w,https://ucarecdn.com/56545192-54e2-4bed-8b99-4d7ffc7d1048/gpay.svg 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="40" height="24" alt="Alt Image" priority="" sizes="100vw" style="--aspect:initial;--aspect-tablet:initial;--aspect-mobile:initial;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%">
+        <div class="anuso2 inset-0 transition-all duration-300 group-hover/image:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/image:opacity-[var(--hvr-op,_var(--op))]" style="--bgc:#242424;--op:0">
+      </div></figure>
+    </div>
+  </div>
+    </div>
+  
+      </div>
+         </ul>
+    </div>
+  
+    </div>
+    </div>
+  
+    
+    </div>
+    </div>
+  
+    
+    </div>
+    </div>
+  
+            </section>
+          
+    
+  
+{% schema %}
+  {
+    
+    "name": "Section gxjxKVrGzS",
+    "tag": "section",
+    "class": "gps-479384635134968631 gps gpsi",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Section design by GemPages. [Click here to start design](https://app.gempages.net/edit?type=section&id=479384635134968631)"
+      }
+    ],
+    "blocks": [{"type": "@app"}]
+  }
+{% endschema %}
