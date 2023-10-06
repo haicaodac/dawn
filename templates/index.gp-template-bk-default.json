@@ -1,5 +1,10 @@
 {
   "sections": {
+    "dcd7be1a-d361-4692-8b30-e2b6dfa4b414": {
+      "type": "gp-global-section-481563615640421015",
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -210,20 +215,15 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "0a7c1980-aee6-4e42-afb6-7cf6cbf35865": {
-      "type": "gp-global-section-479389966011466551",
-      "settings": {
-      }
     }
   },
   "order": [
+    "dcd7be1a-d361-4692-8b30-e2b6dfa4b414",
     "image_banner",
     "rich_text",
     "featured_collection",
     "collage",
     "video",
-    "multicolumn",
-    "0a7c1980-aee6-4e42-afb6-7cf6cbf35865"
+    "multicolumn"
   ]
 }
