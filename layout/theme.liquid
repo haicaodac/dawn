@@ -1,6 +1,8 @@
 {% capture sectionContent %}
   {% section 'gp-global-section-480397913667666716'  %}
 {% endcapture %}
+{{ sectionContent }}
+<br>
 {{ sectionContent | replace: "gp-global-section-480397913667666716", "new-id" }}
 
 <!doctype html>
