@@ -9,6 +9,7 @@
     "page_type": "ABC"
   }
 {% endcapture %}
+{% assign request = request | json %}
 {{ request | json }}
 {{ request.page_type }}
 
