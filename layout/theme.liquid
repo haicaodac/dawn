@@ -5,7 +5,7 @@
 
 {{ request.page_type }}
 {% assign request = "page_type: collection" | split: ':' %}
-{% assign request['page_type'] = 'ABC' %}
+{% assign request.page_type = 'ABC' %}
 {{ request | json }}
 {{ request.page_type }}
 
