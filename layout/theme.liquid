@@ -4,13 +4,9 @@
 {{ sectionContent }}
 
 {{ request.page_type }}
-{% capture request %}
-  {
-    "page_type": "ABC"
-  }
-{% endcapture %}
-{% assign a = request | json %}
-{{ a | json }}
+{% assign request = "A|B" | split: "|" %}
+{% assign request['page_type'] = "ABC" %}
+{{ request | json }}
 {{ request.page_type }}
 
 <br>
