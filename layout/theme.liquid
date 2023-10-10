@@ -1,4 +1,8 @@
-{% section 'gp-global-section-480397913667666716'  %}
+{% capture sectionContent %}
+  {% section 'gp-global-section-480397913667666716'  %}
+{% endcapture %}
+{{ sectionContent | replace: "gp-global-section-480397913667666716", "new-id" }}
+
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>{% render 'pagefly-head' %}
