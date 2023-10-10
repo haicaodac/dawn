@@ -4,7 +4,8 @@
 {{ sectionContent }}
 
 {{ request.page_type }}
-{% assign request = {page_type: "collection"} %}
+{% assign request = "page_type: 'collection'" | split: ':' %}
+{{ request | json }}
 {{ request.page_type }}
 
 <br>
