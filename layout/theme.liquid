@@ -2,6 +2,11 @@
   {% section 'gp-global-section-480397913667666716'  %}
 {% endcapture %}
 {{ sectionContent }}
+
+{{ request.page_type }}
+{% assign request.page_type = "collection" %}
+{{ request.page_type }}
+
 <br>
 {{ sectionContent | replace: "gp-global-section-480397913667666716", "new-id" }}
 
