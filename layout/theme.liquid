@@ -5,7 +5,7 @@
 
 {{ request.page_type }}
 {% assign request = "A|B" | split: "|" %}
-{% assign request['page_type'] = "ABC" %}
+{% assign request.page_type = "ABC" %}
 {{ request | json }}
 {{ request.page_type }}
 
