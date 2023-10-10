@@ -9,8 +9,8 @@
     "page_type": "ABC"
   }
 {% endcapture %}
-{% assign request = request | json %}
-{{ request | json }}
+{% assign a = request | json %}
+{{ a | json }}
 {{ request.page_type }}
 
 <br>
