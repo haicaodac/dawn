@@ -1,10 +1,18 @@
-1
-{% for blog in blogs %}
-   <p>
-      {{ blog }}
-   </p>
-{% endfor %}
-2
+{% capture sectionContent %}
+  {% section 'gp-global-section-480397913667666716'  %}
+{% endcapture %}
+{{ sectionContent }}
+
+{{ request.page_type }}
+{{ request }}
+{% assign request = "A|B" | split: "|" %}
+{% assign request.page_type = "ABC" %}
+{{ request }}
+{{ request.page_type }}
+
+<br>
+{{ sectionContent | replace: "gp-global-section-480397913667666716", "new-id" }}
+
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>{% render 'pagefly-head' %}
