@@ -29,16 +29,16 @@
         {%- liquid
           if request.page_type == 'product'
             if 'static' == 'static'
-              if '8215461986604' == 'latest'
+              if '8215461822764' == 'latest'
                 paginate collections.all.products by 100000
                   assign product = collections.all.products | sort: 'created_at' | reverse | first
                 endpaginate
               else
-                assign product = all_products['the-hidden-snowboard']
+                assign product = all_products['the-collection-snowboard-liquid']
                 if product == empty or product == null
                   paginate collections.all.products by 100000
                     for item in collections.all.products 
-                      if item.id == '8215461986604'
+                      if item.id == '8215461822764'
                         assign product = item
                       endif
                     endfor
@@ -47,16 +47,16 @@
               endif
             endif
           else
-            if '8215461986604' == 'latest'
+            if '8215461822764' == 'latest'
               paginate collections.all.products by 100000
                 assign product = collections.all.products | sort: 'created_at'| reverse | first
               endpaginate
             else
-              assign product = all_products['the-hidden-snowboard']
+              assign product = all_products['the-collection-snowboard-liquid']
               if product == empty or product == null
                 paginate collections.all.products by 100000
                   for item in collections.all.products 
-                    if item.id == '8215461986604'
+                    if item.id == '8215461822764'
                       assign product = item
                     endif
                   endfor
