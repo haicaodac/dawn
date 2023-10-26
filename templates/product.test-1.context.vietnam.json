@@ -4,5 +4,54 @@
     "market": "vietnam"
   },
   "sections": {
-  }
+    "589f5a97-01d9-4bbf-aa1b-cd621b731d79": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "header-8626d1238113c0f7421b1fb209fffc3e": null,
+        "padding_top": 40,
+        "padding_bottom": 52
+      },
+      "blocks": {
+        "template--21527761191212__589f5a97-01d9-4bbf-aa1b-cd621b731d79-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "template--21527761191212__589f5a97-01d9-4bbf-aa1b-cd621b731d79-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--21527761191212__589f5a97-01d9-4bbf-aa1b-cd621b731d79-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21527761191212__589f5a97-01d9-4bbf-aa1b-cd621b731d79-heading-1",
+        "template--21527761191212__589f5a97-01d9-4bbf-aa1b-cd621b731d79-text-1",
+        "template--21527761191212__589f5a97-01d9-4bbf-aa1b-cd621b731d79-button-1"
+      ]
+    }
+  },
+  "order": [
+    "gp_section_453054855804617457",
+    "a80447d3-124a-47e6-84f4-b4969f8e3658",
+    "589f5a97-01d9-4bbf-aa1b-cd621b731d79"
+  ]
 }
