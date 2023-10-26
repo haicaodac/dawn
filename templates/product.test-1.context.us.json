@@ -1,0 +1,19 @@
+{
+  "parent": "product.test-1.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {
+    "a80447d3-124a-47e6-84f4-b4969f8e3658": {
+      "settings": {
+      },
+      "blocks": {
+        "template--21527760142636__a80447d3-124a-47e6-84f4-b4969f8e3658-heading-1": {
+          "settings": {
+            "heading": "US"
+          }
+        }
+      }
+    }
+  }
+}
