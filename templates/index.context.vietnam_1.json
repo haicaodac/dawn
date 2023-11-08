@@ -14,9 +14,17 @@
           }
         }
       }
+    },
+    "a74afdbb-4051-4669-bfa0-7da603afb345": {
+      "settings": {
+        "image": "shopify:\/\/shop_images\/snowboard-113784_1920.jpg"
+      },
+      "blocks": {
+      }
     }
   },
   "order": [
-    "9380afff-f84d-42cc-8542-50c0c68e855d"
+    "9380afff-f84d-42cc-8542-50c0c68e855d",
+    "a74afdbb-4051-4669-bfa0-7da603afb345"
   ]
 }
