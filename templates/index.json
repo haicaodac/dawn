@@ -91,10 +91,59 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "a74afdbb-4051-4669-bfa0-7da603afb345": {
+      "type": "image-banner",
+      "blocks": {
+        "template--18969527779628__a74afdbb-4051-4669-bfa0-7da603afb345-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--18969527779628__a74afdbb-4051-4669-bfa0-7da603afb345-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--18969527779628__a74afdbb-4051-4669-bfa0-7da603afb345-buttons-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18969527779628__a74afdbb-4051-4669-bfa0-7da603afb345-heading-1",
+        "template--18969527779628__a74afdbb-4051-4669-bfa0-7da603afb345-text-1",
+        "template--18969527779628__a74afdbb-4051-4669-bfa0-7da603afb345-buttons-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/burton-feelgood-snowboard-woman.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
     "9380afff-f84d-42cc-8542-50c0c68e855d",
-    "2f4c810e-55a1-405d-b5a0-62d4f1ace6c4"
+    "2f4c810e-55a1-405d-b5a0-62d4f1ace6c4",
+    "a74afdbb-4051-4669-bfa0-7da603afb345"
   ]
 }
