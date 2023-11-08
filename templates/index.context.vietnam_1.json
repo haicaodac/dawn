@@ -4,5 +4,16 @@
     "market": "vietnam"
   },
   "sections": {
+    "9380afff-f84d-42cc-8542-50c0c68e855d": {
+      "settings": {
+      },
+      "blocks": {
+        "template--18969527779628__9380afff-f84d-42cc-8542-50c0c68e855d-heading-1": {
+          "settings": {
+            "heading": "VN"
+          }
+        }
+      }
+    }
   }
 }
