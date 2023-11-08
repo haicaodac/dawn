@@ -20,6 +20,11 @@
         "image": "shopify:\/\/shop_images\/snowboard-113784_1920.jpg"
       },
       "blocks": {
+        "template--18969527779628__a74afdbb-4051-4669-bfa0-7da603afb345-buttons-1": {
+          "settings": {
+            "button_label_1": "Button label VN"
+          }
+        }
       }
     }
   },
