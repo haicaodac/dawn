@@ -26,12 +26,20 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "c2e474e8-3508-46e5-a151-18007cd96f9a": {
+          "type": "heading",
+          "settings": {
+            "heading": "Defaut 2",
+            "heading_size": "h1"
+          }
         }
       },
       "block_order": [
         "template--18969527779628__9380afff-f84d-42cc-8542-50c0c68e855d-heading-1",
         "template--18969527779628__9380afff-f84d-42cc-8542-50c0c68e855d-text-1",
-        "template--18969527779628__9380afff-f84d-42cc-8542-50c0c68e855d-button-1"
+        "template--18969527779628__9380afff-f84d-42cc-8542-50c0c68e855d-button-1",
+        "c2e474e8-3508-46e5-a151-18007cd96f9a"
       ],
       "settings": {
         "desktop_content_position": "center",
