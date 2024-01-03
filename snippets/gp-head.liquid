@@ -9,13 +9,7 @@
         assign isV7GpTemplate = true
       endif
       assign gpShopMeta = shop.metafields.GEMPAGES
-      if gpShopMeta and gpShopMeta['product-default'] and request.page_type == 'product'
-        assign isV7GpTemplate = true
-      endif
-      if gpShopMeta and gpShopMeta['index-default'] and request.page_type == 'index'
-        assign isV7GpTemplate = true
-      endif
-       if gpShopMeta and gpShopMeta['collection-default'] and request.page_type == 'collection'
+      if gpShopMeta and gpShopMeta['product-default'] and request.page_type == 'product' or gpShopMeta and gpShopMeta['index-default'] and request.page_type == 'index' or gpShopMeta and gpShopMeta['collection-default'] and request.page_type == 'collection'
         assign isV7GpTemplate = true
       endif
       if isPreview
@@ -25,8 +19,8 @@
 
     {% if isV7GpTemplate or isThemeSection %}
       
-        <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-lazyload.v2.js" async></script>
-        <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-global.js" defer></script>
+        <script src="https://d3kbi0je7pp4lw.cloudfront.net/assets/gp-lazyload.v2.js" async></script>
+        <script src="https://d3kbi0je7pp4lw.cloudfront.net/assets/gp-global.js" defer></script>
         
       {{ 'gp-global.css' | asset_url | stylesheet_tag }}
       {{ 'gp-style.css' | asset_url | stylesheet_tag }}
