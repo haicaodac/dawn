@@ -14,12 +14,20 @@ This file can be re-written at any time. Please do not update this file directly
 
     assign optionsSwatches = shop.metafields.foxify.product-options-swatches.value.options
     assign colorSwatchTrigger = shop.metafields.foxify.product-options-swatches.value.color_swatch_trigger
+
+		assign is_size_option = false
+		assign size_title_downcase = 'Size,Tamanho,Taille,Misurare' | downcase
 %}
 {%- unless product.has_only_default_variant -%}
 <f-variant-picker class="f:variant-picker no-js-hidden" data-update-url="{{ updateUrl | default: false }}" data-product-id="{{ product.id }}" data-section-id="{{ sectionId }}" data-product-handle="{{ product.handle }}" data-url="{{ product.url }}" data-max-options="{{ product.options_with_values.size }}">
     {%- for option in product.options_with_values -%}
         {% liquid
             assign option_name_downcase = option.name | downcase
+						if size_title_downcase contains option_name_downcase
+								assign is_size_option = true
+						else
+								assign is_size_option = false
+						endif
 
             if colorSwatchTrigger != blank
                 assign colorSwatchTrigger = colorSwatchTrigger | downcase | split: ','
@@ -30,6 +38,11 @@ This file can be re-written at any time. Please do not update this file directly
                     assign picker_type = variant_picker_type
                 endif
             endif
+
+						assign sizeguide_label = 'products.product.size_guide' | t
+						if sizeguide_label contains 'Translation missing'
+								assign sizeguide_label = ''
+						endif
         %}
         <div class="f:variant-picker__field-wrapper">
             {% case picker_type %}
@@ -40,6 +53,12 @@ This file can be re-written at any time. Please do not update this file directly
                             {% if show_selected_value %}
                                 <span class="f:variant-picker__selected-value">{{ option.selected_value }}</span>
                             {% endif %}
+														{% if is_size_option %}
+																<a href="#" class="foxkit-sizechart-button hidden f:hidden foxkit-sizechart-opener !foxkit-hidden foxkit-inline-flex foxkit-items-center">
+																		<svg class="m-svg-icon--large" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M608 128H32c-17.67 0-32 14.33-32 32v192c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V160c0-17.67-14.33-32-32-32zm0 224H32V160h80v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h80v192z"/></svg>
+																		<span class="foxkit-sizechart-button--label">{{ sizeguide_label }}</span>
+																</a>
+														{% endif %}
                         </label>
                         <select id="Option-{{ sectionId }}-{{ forloop.index0 }}"
                                 class="f:form-control"
@@ -61,6 +80,12 @@ This file can be re-written at any time. Please do not update this file directly
                             {% if show_selected_value %}
                                 <span class="f:variant-picker__selected-value">{{ option.selected_value }}</span>
                             {% endif %}
+														{% if is_size_option %}
+																<a href="#" class="foxkit-sizechart-button hidden f:hidden foxkit-sizechart-opener !foxkit-hidden foxkit-inline-flex foxkit-items-center">
+																		<svg class="m-svg-icon--large" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M608 128H32c-17.67 0-32 14.33-32 32v192c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V160c0-17.67-14.33-32-32-32zm0 224H32V160h80v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h80v192z"/></svg>
+																		<span class="foxkit-sizechart-button--label">{{ sizeguide_label }}</span>
+																</a>
+														{% endif %}
                         </label>
                         <div class="f:variant-picker__option-values">
                             {%- for value in option.values -%}
@@ -93,6 +118,12 @@ This file can be re-written at any time. Please do not update this file directly
                         {% if show_selected_value %}
                             <span class="f:variant-picker__selected-value">{{ option.selected_value }}</span>
                         {% endif %}
+												{% if is_size_option %}
+														<a href="#" class="foxkit-sizechart-button hidden f:hidden foxkit-sizechart-opener !foxkit-hidden foxkit-inline-flex foxkit-items-center">
+																<svg class="m-svg-icon--large" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M608 128H32c-17.67 0-32 14.33-32 32v192c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V160c0-17.67-14.33-32-32-32zm0 224H32V160h80v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h80v192z"/></svg>
+																<span class="foxkit-sizechart-button--label">{{ sizeguide_label }}</span>
+														</a>
+												{% endif %}
                     </label>
                     <div class="f:variant-picker__option-values">
                         {%- for value in option.values -%}

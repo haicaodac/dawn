@@ -11,7 +11,6 @@ This file can be re-written at any time. Please do not update this file directly
     endif
     assign cardStyle = card_style
     assign ratio = image_ratio
-    assign textAlign = text_align | default: 'left'
     assign showBlog = articleCard.showBlog
     assign showDate = articleCard.showDate
     assign showReadmore = articleCard.showReadmore
@@ -26,9 +25,9 @@ This file can be re-written at any time. Please do not update this file directly
     if ratio == '1:1'
         assign ratio = '1'
     endif
-    if textAlign == nil or textAlign == 'inherit'
-        assign textAlign = articleCard.textAlign
-    endif
+		if text_align == '' or text_align == null or text_align == 'undefined'
+				assign text_align = articleCard.textAlign
+		endif
 
     if cardStyle == nil or cardStyle == 'inherit'
         assign cardStyle = articleCard.style
@@ -52,7 +51,7 @@ This file can be re-written at any time. Please do not update this file directly
     assign default_title = translation.onboarding.blog_title
     assign default_date = 'now' | date: "%b %d, %y"
 %}
-<div class="{{ SHORT_ID_KEY }}:article-card {{ SHORT_ID_KEY }}:image--hover-effect {{ SHORT_ID_KEY }}:article-card--align-{{ textAlign }} {{ SHORT_ID_KEY }}:article-card--style-{{ cardStyle | default: '1' }} {{ SHORT_ID_KEY }}:relative{% if backgroundColor != blank %} {{ SHORT_ID_KEY }}:article-card--has-bg{% endif %}">
+<div class="{{ SHORT_ID_KEY }}:article-card {{ SHORT_ID_KEY }}:image--hover-effect {{ SHORT_ID_KEY }}:article-card--align-{{ text_align }} {{ SHORT_ID_KEY }}:article-card--style-{{ cardStyle | default: '1' }} {{ SHORT_ID_KEY }}:relative{% if backgroundColor != blank %} {{ SHORT_ID_KEY }}:article-card--has-bg{% endif %}">
   <div class="{{ SHORT_ID_KEY }}:article-card__image {{ SHORT_ID_KEY }}:block {{ SHORT_ID_KEY }}:overflow-hidden {{ SHORT_ID_KEY }}:relative {{ SHORT_ID_KEY }}:card">
       <a href="{{ article.url }}" class="{{ SHORT_ID_KEY }}:full-width-link"><span class="f:visually-hidden">{{ article.title | default: default_title }}</span></a>
       <{{ SHORT_ID_KEY }}-image class="{{ SHORT_ID_KEY }}:image" data-image-loading style="--f-aspect-ratio: {{ ratio | default: 1 }}">
