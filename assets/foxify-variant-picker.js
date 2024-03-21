@@ -13,7 +13,7 @@ if (!customElements.get('f-variant-picker')) {
 			this.optionsSwatches = window.Foxify.Extensions ? window.Foxify.Extensions.optionsSwatches : {}
 			this.productId = this.dataset.productId
 			this.sectionId = this.dataset.sectionId
-			this.section = document.getElementById(`f-${this.sectionId}`)
+			this.section = document.querySelector(`.f-${this.sectionId}`)
 			this.productForm = this.section.querySelectorAll('f-product-form')
 			this.domNodes = this.Utils.queryDomNodes(this.selectors, this.section)
 			this.addEventListener('change', this.onVariantChange);
@@ -159,7 +159,7 @@ if (!customElements.get('f-variant-picker')) {
 			if (priceWrapper) priceWrapper.classList.remove(classes.visibilityHidden)
 			if (salePrice) salePrice.innerHTML = this.Utils.formatMoney(price, money_format)
 
-			if (compareAtPrice?.length && compare_at_price > price) {
+			if (compareAtPrice && compareAtPrice.length && compare_at_price > price) {
 				compareAtPrice.forEach(item => item.innerHTML = this.Utils.formatMoney(compare_at_price, money_format))
 			} else {
 				compareAtPrice.forEach(item => item.innerHTML = this.Utils.formatMoney(price, money_format))
@@ -177,7 +177,7 @@ if (!customElements.get('f-variant-picker')) {
 					value = this.Utils.formatMoney(compare_at_price - price, money_format)
 				}
 
-				saleAmount.textContent = value
+				saleAmount.innerHTML = value
 			}
 
 			if (unit_price_measurement && unitPrice) {
