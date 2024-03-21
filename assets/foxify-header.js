@@ -6,7 +6,7 @@ class FStickyHeader extends HTMLElement {
   static get observedAttributes() { return ['data-header-sticky', 'data-header-transparent']; }
 	connectedCallback() {
     this.classes = {
-      headerSection: '.shopify-section.foxify-header',
+      headerSection: '.foxify-header',
       sticky: 'f:header--sticky',
       hidden: 'f:header--hidden',
       animate: 'f:header--animate',
@@ -33,7 +33,7 @@ class FStickyHeader extends HTMLElement {
 	}
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'data-header-transparent') {
+    if (name === 'data-header-transparent' && this.headerSection) {
       this.headerTransparent = this.dataset.headerTransparent === 'true'
       if (!this.headerTransparent) {
         this.headerSection.classList.remove(this.classes.headerTransparent)
